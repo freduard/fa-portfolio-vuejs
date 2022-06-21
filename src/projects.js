@@ -46,7 +46,7 @@ export const projects = [
         image: getImg("andres_koljalg_portfolio.png"),
         github: "https://github.com/andreskoljalg/andres-koljalg-portfolio",
         figma: "",
-        online: "",
+        online: "https://andres-koljalg-portfolio.pages.dev/",
         p1: "Sain Andresega läbi oma venna tuttavaks, kui ta oli maininud e-portfoolio vajadust. See oli minu esimene päris projekt ja veebiarenduse tööots mida ma sel ajal teinud olin. Selle projekti arendamise käigus sain ma arvan ühe kooli aasta võrra teadmisi juurde veebiarendamises. Alguses mõtlesin, et see on lihtne ja kiire paarinädala töö mis on osutus täiesti vastupidiseks.",
         p2: "Algselt ainukene asi mida ma kasutasin oli TailwindCSS ilma ühegi raamistikuta, mis oli suur viga elementide paigutuse tõttu, kuna elementide klasside read tulid väga massiivsed mistõttu oli ka koodist lõpuks raske aru saada. Peale selle kui ma veel copy-past-isin elemente kuskilt mujalt koodist, siis läheb kõik väga segaseks. On olemas erinevad raamistikud nagu Vue.js mis lahendavad selle probleemi, mida ma muidugi naiivselt ei kasutanud.",
         p3: "Paratamatult pidin ma terve projekti port'ima Vue.js raamistiku peale ja ümber ehitama terve saidi back-end'i süsteemi mis oli pehmelt öeldes piinarikas. Vähemalt nüüd tean, et raamistik on alati vajalik, ükskõik kui suur või väike su projekt tundub.",
