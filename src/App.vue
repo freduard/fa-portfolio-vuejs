@@ -19,8 +19,11 @@ html {
 }
 
 .project-card-txt-shdw {
-  background: rgb(0,0,0);
-  background: radial-gradient(circle, rgba(0,0,0,.7) 0%, rgba(252,70,70,0) 100%); 
+  border-radius: 50%;
+  background: black;
+  opacity: .75;
+  -webkit-filter: blur(100px);
+  -webkit-transform: scale(1, 0.2);
 }
 
 .fade-enter-from,
