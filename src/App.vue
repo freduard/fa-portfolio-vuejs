@@ -23,7 +23,9 @@ html {
   background: black;
   opacity: .75;
   -webkit-filter: blur(100px);
+  filter: blur(100px);
   -webkit-transform: scale(1, 0.2);
+  transform: scale(1, 0.2);
 }
 
 .fade-enter-from,
