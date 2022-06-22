@@ -7,7 +7,8 @@ const getImg = (name) => {
 export const projects = [
     {
         id: 1,
-        date: "5 November, 2021",
+        // date: "November 5, 2021",
+        date: "November 2021",
         title: "Ryan Reynolds E-Portfoolio",
         image: getImg("ryan_reynolds.jpg"),
         github: "https://tak19leemet.itmajakas.ee/team3-portfolio/",
@@ -18,7 +19,8 @@ export const projects = [
     },
     {
         id: 2,
-        date: "Detsember 15, 2021",
+        // date: "Detsember 15, 2021",
+        date: "Detsember 2021",
         title: "Virtuaalne Instrument",
         image: getImg("arduino_chello.jpg"),
         github: "https://github.com/freduard/tiim-5",
@@ -30,7 +32,8 @@ export const projects = [
     },
     {
         id: 3,
-        date: "Märts 4, 2022",
+        // date: "Märts 4, 2022",
+        date: "Märts 2022",
         title: "Andmemudelite & projekti planeerimine",
         image: getImg("datamodels_project_planning.webp"),
         github: "https://github.com/angsuuu/Project-5---Team-8",
@@ -41,7 +44,8 @@ export const projects = [
     },
     {
         id: 4,
-        date: "Märts 25, 2022",
+        // date: "Märts 25, 2022",
+        date: "Märts 2022",
         title: "Andres Kõljalg E-Portfoolio",
         image: getImg("andres_koljalg_portfolio.png"),
         github: "https://github.com/andreskoljalg/andres-koljalg-portfolio",
@@ -53,7 +57,8 @@ export const projects = [
     },
     {
         id: 5,
-        date: "Aprill 6, 2022",
+        // date: "Aprill 6, 2022",
+        date: "Aprill 2022",
         title: "Muusika poe veebileht",
         image: getImg("music_instrument_store.jpg"),
         github: "https://github.com/TimTimDev/timo-lopuproje",
