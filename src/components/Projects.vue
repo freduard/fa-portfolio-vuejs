@@ -2,7 +2,7 @@
     <div class="p-12 flex flex-col gap-20 text-[#E7685D]">
         <router-link :to="{ path: '/Project.vue', query: { projectIndex: projects.findIndex(item => item.id === project.id) }}" class="z-10 hover:scale-[1.02] ease-in-out duration-300 hover-trigger" v-for="(project, index) in projects" :key="index"><div class="h-44 overflow-hidden flex items-center justify-center">
             <div class="absolute z-[2] p-3 px-64 flex flex-col items-center justify-center gap-2 h-44">
-                <div class="project-card-txt-shdw absolute z-[-1] w-full h-[650px]"></div> 
+                <div class="project-card-txt-shdw absolute z-[-1] w-3/4 h-[600px]"></div> 
                 <p class="text-5xl">{{project.title}}</p>
                 <p class="text-lg">{{project.date}}</p>
             </div>
