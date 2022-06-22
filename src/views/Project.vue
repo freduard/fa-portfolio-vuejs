@@ -1,20 +1,20 @@
 <template>
     <div class="p-12 flex flex-col gap-10 text-[#E7685D]">
-        <div class="flex justify-between items-center text-2xl">
+        <div class="flex justify-between items-center text-2xl  ">
             <router-link :to="{ path: '/Project.vue', query: { projectIndex: projectNavigator(false) }}" class="flex items-center justify-center gap-2 hover:text-red-300 duration-150"><ArrowNarrowLeftIcon class="w-5"/> {{ getProjectTitle(false) }}</router-link>
-            <router-link to="/" class=" hover:text-red-300 duration-150">Back</router-link>
+            <router-link to="/" class=" hover:text-red-300 duration-150"><img src="../assets/logos/fa_logo.svg" alt="" class="h-10"></router-link>
             <router-link :to="{ path: '/Project.vue', query: { projectIndex: projectNavigator(true) }}" class="flex items-center justify-center gap-2 hover:text-red-300 duration-150">{{ getProjectTitle(true) }} <ArrowNarrowRightIcon class="w-5" /></router-link>
         </div>
         <div class="max-h-96 flex justify-center items-center overflow-hidden">
             <img :src="project.image" class="w-full" alt="">
         </div>
         <div class="w-fit">
-            <p class="text-7xl">{{project.title}}</p>
-            <div class="flex justify-between items-center text-3xl">
+            <p class="text-6xl">{{project.title}}</p>
+            <div class="flex justify-between items-center text-2xl">
                 <div>
                     <p>{{project.date}}</p>
                 </div>
-                <div class="flex gap-5">
+                <!-- <div class="flex gap-5">
                     <a :href="project.github" v-if="project.github" target="_blank" class="hover:text-red-300 duration-150 underline">github</a>
                     <p class="text-neutral-500 cursor-default select-none" v-else>github</p>
                     <p>•</p>
@@ -23,10 +23,20 @@
                     <p>•</p>
                     <a :href="project.online" v-if="project.online" target="_blank" class="hover:text-red-300 duration-150 underline">online</a>
                     <p class="text-neutral-500 cursor-default select-none" v-else>online</p>
-                </div>
+                </div> -->
             </div>
         </div>
-        <p v-for="index in attrLength" :key="index" class="text-3xl">{{ project[`p${index}`] }}</p>
+        <p v-for="index in attrLength" :key="index" class="text-2xl">{{ project[`p${index}`] }}</p>
+        <div class="flex gap-5 text-2xl">
+            <a :href="project.github" v-if="project.github" target="_blank" class="hover:text-red-300 duration-150 underline">github</a>
+            <p class="text-neutral-500 cursor-default select-none" v-else>github</p>
+            <p>•</p>
+            <a :href="project.figma" v-if="project.figma" target="_blank" class="hover:text-red-300 duration-150 underline">figma</a>
+            <p class="text-neutral-500 cursor-default select-none" v-else>figma</p>
+            <p>•</p>
+            <a :href="project.online" v-if="project.online" target="_blank" class="hover:text-red-300 duration-150 underline">online</a>
+            <p class="text-neutral-500 cursor-default select-none" v-else>online</p>
+        </div>
     </div>
 </template>
 
