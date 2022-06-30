@@ -18,6 +18,13 @@ html {
   background-color: black;
 }
 
+input, textarea {
+  background-color: black;
+  border-color: #E7685D;
+  border-width: 2px;
+  width: 33%;
+}
+
 .project-card-txt-shdw {
   border-radius: 50%;
   background: black;
