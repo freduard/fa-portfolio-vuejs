@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col justify-between gap-20 p-12 h-screen text-5xl text-[#E7685D]">
+    <div class="flex flex-col justify-between gap-5 p-12 h-screen text-5xl text-[#E7685D]">
         <div>
             <div class="flex items-end">
                 <img class="w-80 h-fit" src="../assets/logos/fa_logo.svg" alt="">
