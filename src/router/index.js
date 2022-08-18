@@ -21,7 +21,10 @@ const routes = [
     {
         path: '/Contact.vue',
         name: 'Contact',
-        component: Contact
+        component: Contact,
+        props(route){
+            return { state: route.query.state }
+        }
     },
 ]
 
