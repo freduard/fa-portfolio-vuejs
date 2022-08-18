@@ -11,7 +11,8 @@
             <p>Alustasin programmeerimisega juba 9-aastaselt ning arvan, et olen selle vähese ajaga jõudnud päris kaugele. Varem tegelesin C# 
                 rakenduste ja videote monteerimisega, hetkel tegelen peamiselt HTML, CSS, JavaScripti ja Pythoniga. Mulle meeldib ehitada ja arendada 
                 veebisaite, programme ja skripte.</p>
-            <router-link to="/Contact.vue">conact</router-link>
+            <router-link to="/Contact.Vue">Contact</router-link>
+
         </div>
         <div>
             <!-- <a href="#projects" class="text-9xl" id="projects">Projektid</a> -->

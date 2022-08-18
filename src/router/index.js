@@ -3,6 +3,7 @@ import Index from '../views/Index.vue'
 import Project from '../views/Project.vue'
 import Contact from '../views/Contact.vue'
 
+
 const routes = [
     {
         path: '/',
