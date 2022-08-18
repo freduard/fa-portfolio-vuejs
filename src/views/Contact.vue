@@ -21,7 +21,7 @@
             </div>
             <button type="submit" name="submit" class="bg-black border-[#E7685D] border-2 hover:bg-[#E7685D] text-4xl hover:text-black duration-150 p-2 px-4">submit</button>
         </form>
-        <div v-if="props.state == 0" class="flex flex-col items-center justify-center gap-10">
+        <div v-if="props.state == 1" class="flex flex-col items-center justify-center gap-10">
             <h1 class="text-9xl">Thank you!</h1>
             <p class="text-4xl">I've received your message and will get back to you as soon as possible.</p>
             <router-link to="/" class="text-4xl underline">Home</router-link>
