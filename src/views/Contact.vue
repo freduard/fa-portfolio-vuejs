@@ -1,8 +1,8 @@
 <template>
     <div class="p-12 flex flex-col justify-center items-center text-[#E7685D] h-screen">
         <form v-if="props.state != 1" action="https://tak21fredyait.itmajakas.ee/" method="post" class="gap-10 flex flex-col items-center w-1/2">
-            <div class="w-full h-0 overflow-hidden duration-500 ease-in-out" id="Alert">
-                <p class="text-black bg-[#E7685D] p-2 text-2xl text-center w-full">Something went wrong, write to me directly at <a href="mailto:aitfredy@gmail.com" class="underline">aitfredy@gmail.com</a></p>
+            <div class="w-full h-0 bg-[#E7685D] text-black text-2xl duration-300 ease-in-out" id="alert">
+                <p class="text-center p-2">Something went wrong, contact me directly at <a href="mailto:aitfredy@gmail.com" class="underline">aitfredy@gmail.com</a>.</p>
             </div>
             <div class="flex justify-between w-full items-center">
                 <h1 class="text-7xl">Contact me!</h1>
@@ -37,6 +37,8 @@ import { XIcon } from '@heroicons/vue/outline'
 
 const alert = document.getElementById('Alert');
 
+const alert = document.getElementById('alert');
+
 const props = defineProps({
     state: String
 })
@@ -45,6 +47,10 @@ if(props.state == 2){
     alert.style.height = 'full';
 }
 
+
+if(props.state == '2'){
+    alert.style.height = 'full';
+}
 </script>
 
 <style>
