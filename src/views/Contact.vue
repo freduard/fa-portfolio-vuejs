@@ -41,14 +41,10 @@ const props = defineProps({
     state: String
 })
 
-if(props.state == 2){
-    alert.style.height = 'full';
-}
-
-
 if(props.state == '2'){
     alert.style.height = 'full';
 }
+
 </script>
 
 <style>
