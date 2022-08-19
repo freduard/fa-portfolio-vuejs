@@ -15,8 +15,7 @@
 
         </div>
         <div>
-            <!-- <a href="#projects" class="text-9xl" id="projects">Projektid</a> -->
-            <p class="text-8xl">Projektid</p>
+            <p class="text-8xl" id="ptag">Projektid</p>
         </div>
     </div>
     <Projects />
