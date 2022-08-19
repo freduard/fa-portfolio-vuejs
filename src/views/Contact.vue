@@ -1,7 +1,7 @@
 <template>
     <div class="p-12 flex flex-col justify-center items-center text-[#E7685D] h-screen">
         <form v-if="props.state != 1" action="https://tak21fredyait.itmajakas.ee/" method="post" class="gap-10 flex flex-col items-center w-1/2">
-            <div class="w-full h-0 bg-[#E7685D] text-black text-2xl duration-300 ease-in-out" id="alert">
+            <div class="w-full bg-[#E7685D] text-black text-2xl overflow-hidden" id="alert">
                 <p class="text-center p-2">Something went wrong, contact me directly at <a href="mailto:aitfredy@gmail.com" class="underline">aitfredy@gmail.com</a>.</p>
             </div>
             <div class="flex justify-between w-full items-center">
@@ -35,16 +35,9 @@
 <script setup>
 import { XIcon } from '@heroicons/vue/outline'
 
-const alert = document.getElementById('alert');
-
 const props = defineProps({
     state: String
 })
-
-if(props.state == '2'){
-    alert.style.height = 'full';
-}
-
 </script>
 
 <style>
