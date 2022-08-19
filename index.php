@@ -11,8 +11,13 @@ if (isset($_POST['submit'])) {
     $headers = "Sent by ".$name." at ".$mailFrom;
 
     if (empty($honeyPotMail) && empty($honeyPotWebsite)) {
-        mail($mailTo, $subject, $message, $headers);
-        header("Location: https://fredyait.com/Contact.vue?state=1");
+        try {
+            mail($mailTo, $subject, $message, $headers);
+            header("Location: https://fredyait.com/Contact.vue?state=1");
+        }
+        catch(Exception) {
+            header("Location: https://fredyait.com/Contact.vue?state=2");
+        }
     } else {
         header("Location: https://fredyait.com");
     }
