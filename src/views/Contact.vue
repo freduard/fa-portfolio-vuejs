@@ -35,8 +35,6 @@
 <script setup>
 import { XIcon } from '@heroicons/vue/outline'
 
-const alert = document.getElementById('Alert');
-
 const alert = document.getElementById('alert');
 
 const props = defineProps({
