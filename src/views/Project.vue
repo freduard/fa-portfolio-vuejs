@@ -73,7 +73,7 @@ function projectNavigator(direction){
 
 function getProjectTitle(direction){
     if(direction){
-        if(props.projectIndex != 4){
+        if(props.projectIndex != (projects.length - 1)){
             return projects[parseInt(props.projectIndex) + 1].title;
         } else{
             return projects[0].title;
