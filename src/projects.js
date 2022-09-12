@@ -60,7 +60,7 @@ export const projects = [
         // date: "Aprill 6, 2022",
         date: "Aprill 2022",
         title: "Muusika poe veebileht",
-        image: getImg("music_instrument_store.jpg"),
+        image: getImg("music_instrument_store.png"),
         github: "https://github.com/TimTimDev/timo-lopuproje",
         figma: "",
         online: "",
