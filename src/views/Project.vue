@@ -1,9 +1,11 @@
 <template>
-    <div class="p-12 flex flex-col gap-10 text-[#E7685D]">
+    <div class="p-4 lg:p-12 flex flex-col gap-10 text-[#E7685D]">
         <div class="flex justify-between items-center text-2xl  ">
-            <router-link :to="{ path: '/Project.vue', query: { projectIndex: projectNavigator(false) }}" class="flex items-center justify-center gap-2 hover:text-red-300 duration-150"><ArrowNarrowLeftIcon class="w-5"/> {{ getProjectTitle(false) }}</router-link>
+            <router-link :to="{ path: '/Project.vue', query: { projectIndex: projectNavigator(false) }}" class="hidden lg:flex items-center justify-center gap-2 hover:text-red-300 duration-150"><ArrowNarrowLeftIcon class="w-5"/> {{ getProjectTitle(false) }}</router-link>
+            <router-link :to="{ path: '/Project.vue', query: { projectIndex: projectNavigator(false) }}" class="lg:hidden flex items-center justify-center gap-2 hover:text-red-300 duration-150"><ArrowNarrowLeftIcon class="h-10"/></router-link>
             <router-link to="/" class=" hover:text-red-300 duration-150"><img src="../assets/logos/fa_logo.svg" alt="" class="h-10"></router-link>
-            <router-link :to="{ path: '/Project.vue', query: { projectIndex: projectNavigator(true) }}" class="flex items-center justify-center gap-2 hover:text-red-300 duration-150">{{ getProjectTitle(true) }} <ArrowNarrowRightIcon class="w-5" /></router-link>
+            <router-link :to="{ path: '/Project.vue', query: { projectIndex: projectNavigator(true) }}" class="hidden lg:flex items-center justify-center gap-2 hover:text-red-300 duration-150">{{ getProjectTitle(true) }} <ArrowNarrowRightIcon class="w-5" /></router-link>
+            <router-link :to="{ path: '/Project.vue', query: { projectIndex: projectNavigator(true) }}" class="lg:hidden flex items-center justify-center gap-2 hover:text-red-300 duration-150"><ArrowNarrowRightIcon class="h-10" /></router-link>
         </div>
         <div class="max-h-96 flex justify-center items-center overflow-hidden">
             <img :src="project.image" class="w-full" alt="">

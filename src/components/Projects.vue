@@ -3,8 +3,8 @@
         <router-link :to="{ path: '/Project.vue', query: { projectIndex: projects.findIndex(item => item.id === project.id) }}" class="z-10 hover:scale-[1.02] ease-in-out duration-300 hover-trigger" v-for="(project, index) in projects" :key="index"><div class="h-44 overflow-hidden flex items-center justify-center">
             <div class="absolute z-[2] p-3 px-4 lg:px-64 flex flex-col items-center justify-center gap-2 h-44 text-center">
                 <div class="project-card-txt-shdw absolute z-[-1] w-full lg:w-3/4 h-[600px]"></div>
-                <p class="text-2xl lg:text-5xl">{{project.title}}</p>
-                <p class="text-lg">{{project.date}}</p>
+                <p class="text-2xl font-bold lg:font-normal cTextShadow lg:text-5xl">{{project.title}}</p>
+                <p class="text-lg lg:text-2xl">{{project.date}}</p>
             </div>
             <img :src="project.image" class="w-full ease-in-out duration-300 hover-target ">
         </div></router-link>
