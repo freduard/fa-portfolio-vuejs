@@ -11,7 +11,7 @@
             <img :src="project.image" class="w-full" alt="">
         </div>
         <div class="w-fit">
-            <p class="text-6xl">{{project.title}}</p>
+            <p class="text-4xl lg:text-6xl">{{project.title}}</p>
             <div class="flex justify-between items-center text-2xl">
                 <div>
                     <p>{{project.date}}</p>
