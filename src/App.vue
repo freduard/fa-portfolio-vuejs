@@ -9,7 +9,6 @@ export default {
 </script>
 
 <template>
-  <img src="./assets/images/dark-wallpaper.png" alt="">
   <div class="h-screen w-screen bg-zinc-900 p-6 lg:p-12 grid grid-cols-3 gap-6 lg:gap-12">
       <SideNavVue />
 
