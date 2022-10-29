@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Index from '../views/Index.vue'
-import Project from '../views/Project.vue'
-import Contact from '../views/Contact.vue'
+import Index from '../views/Index.vue';
+import Projects from '../views/Projects.vue';
+// import Project from '../views/Project.vue'
 
+import Contact from '../views/Contact.vue'
 
 const routes = [
     {
@@ -11,12 +12,9 @@ const routes = [
         component: Index
     },
     {
-        path: '/Project.vue',
-        name: 'Project',
-        component: Project,
-        props(route){
-            return { projectIndex: route.query.projectIndex }
-        }
+        path: '/Projects.vue',
+        name: 'Projects',
+        component: Projects
     },
     {
         path: '/Contact.vue',
@@ -26,6 +24,15 @@ const routes = [
             return { state: route.query.state }
         }
     },
+    // {
+    //     path: '/Project.vue',
+    //     name: 'Project',
+    //     component: Project,
+    //     props(route){
+    //         return { projectIndex: route.query.projectIndex }
+    //     }
+    // },
+
 ]
 
 const router = createRouter({
