@@ -6,21 +6,21 @@ const props = defineProps({
 
 <template>
     <form v-if="props.state != 1 && props.state != 2" action="https://tak21fredyait.itmajakas.ee/" method="post">
-        <p class="text-6xl mb-6 lg:mr-24">Kontakteeru</p>
+        <p class="text-3xl md:text-4xl xl:text-6xl mb-3 xl:mb-6 lg:mr-24">Kontakteeru</p>
         <div class="flex flex-col gap-3">
             <div>
-                <p class="text-3xl">Nimi</p>
-                <input type="text" name="name" required="required" class="text-xl outline-none w-full">
+                <p class="text-xl md:text-2xl xl:text-3xl">Nimi</p>
+                <input type="text" name="name" required="required" class="text-md md:text-xl outline-none w-full">
             </div>
             <div>
-                <p class="text-3xl">E-Mail</p>
-                <input type="text" name="emanueladdresshaha" required="required" class="text-xl w-full outline-none">
+                <p class="text-xl md:text-2xl xl:text-3xl">E-Mail</p>
+                <input type="text" name="emanueladdresshaha" required="required" class="text-md md:text-xl w-full outline-none">
                 <input type="text" name="email" autocomplete="off" class="hidden">
                 <input type="text" name="website" autocomplete="off" class="hidden">
             </div>
             <div>
-                <p class="text-3xl">Sõnum</p>
-                <textarea name="message" rows="3" spellcheck="false" required="required" class="text-xl w-full resize-none outline-none"></textarea>
+                <p class="text-xl md:text-2xl xl:text-3xl">Sõnum</p>
+                <textarea name="message" rows="3" spellcheck="false" required="required" class="text-md md:text-xl w-full resize-none outline-none"></textarea>
             </div>
             <button type="submit" name="submit" class="bg-zinc-700 p-2 text-xl rounded hover:bg-slate-600 duration-150">Submit</button>
         </div>

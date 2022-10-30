@@ -1,12 +1,12 @@
 <template>
     <div class="flex justify-between mb-6 items-center">
-        <p class="text-6xl">Projektid</p>
+        <p class="text-2xl lg:text-6xl">Projektid</p>
         <button v-on:click="sortBy" id="sortButton" class="bg-zinc-700 p-2 rounded hover:bg-slate-600 duration-150">{{sortByLatest ? 'Hilisemad' : 'Varasemad'}}</button>
     </div>
-    <div class="grid grid-cols-2 2xl:grid-cols-3 gap-6">
-        <router-link :to="{ path: '/Project.vue', query: { projectIndex: projects.findIndex(item => item.id === project.id) }}" v-for="(project, index) in projects" :key="index" class="hover:scale-[1.025] duration-300 ease-in-out h-fit"><div class="bg-zinc-700 rounded drop-shadow-md hover:bg-slate-600 duration-300 ease-in-out">
-            <img :src="project.image" class="rounded-t w-full max-h-44" style="object-fit: cover;">
-            <div class="flex flex-col gap-2 p-2">
+    <div>
+        <router-link :to="{ path: '/Project.vue', query: { projectIndex: projects.findIndex(item => item.id === project.id) }}" v-for="(project, index) in projects" :key="index" class="hover:scale-[1.025] duration-300 ease-in-out bg-zinc-700 rounded drop-shadow-md hover:bg-slate-600 flex flex-col lg:flex-row lg:h-36 mb-6">
+            <img :src="project.image" class="rounded-l h-32 lg:w-2/5 lg:h-auto" style="object-fit: cover;">
+            <div class="flex flex-col justify-between h-full p-2">
                 <h1 class="text-2xl font-['CourierBold']">{{project.title}}</h1>
                 <p>{{ getShortDesc(index) }}</p>
                 <div class="flex justify-between">
@@ -14,7 +14,7 @@
                     <p class="text-blue-300">{{project.lang}}</p>
                 </div>
             </div>
-        </div></router-link>
+        </router-link>
     </div>
 </template>
 
