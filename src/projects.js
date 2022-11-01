@@ -7,6 +7,19 @@ const getImg = (name) => {
 export const projects = [
     {
         id: 1,
+        // date: "Oktoober 4, 2021",
+        date: "Oktoober 2021",
+        title: "Collatz Conjecture",
+        image: getImg("collatz.jpg"),
+        lang: "Python",
+        github: "https://github.com/freduard/collatz_conjecture",
+        figma: "",
+        online: "",
+        p1: "Tegin selle skripti, et oma oskuseid Pythonis harjutada. Nägin videot selle matemaatilise probleemi kohta, millejärel tuli mõte seda teha. 'Collatz Conjecture' jaoks tuleb võtta mingi number. Kui see on paarisarv, siis tuleb see jagada kahega või korrutada kolmega ja lisada selle 1 kui see ei ole paarisarv. See skript kalkuleerib läbi kõik numbrid lõpmatuseni ja salvestab selle numbri mille peal sai teha kõige rohkem kalkulatsioone, ehk siis jagamist või korrutamist.",
+        p2: "Lisasin ka salvestamis feature'i mis laseb sul samast kohast edasi kalkuleerida kui skript kinni panna."
+    },
+    {
+        id: 2,
         // date: "November 5, 2021",
         date: "November 2021",
         title: "Ryan Reynolds E-Portfoolio",
@@ -19,7 +32,7 @@ export const projects = [
         p2: "Tagasi vaadates oleksin võinud lehekülje HTML struktuuri juba algselt paremini kodeerida ja organiseerida, kuna lõpuks oli kõik üpris segane ja oli raske koodist aru saada. Arvestades sellega, et see oli mu päris esimene kord kui ma üldse veebilehte arendasin, olen tulemusega rahul."
     },
     {
-        id: 2,
+        id: 3,
         // date: "Detsember 15, 2021",
         date: "Detsember 2021",
         title: "Virtuaalne Instrument",
@@ -33,7 +46,7 @@ export const projects = [
         p3: "Samuti oli probleeme meeskonnaga, kuna puudus juht, kes kogu tööd oleks suunanud ja koordineerinud. Lisaks mõned meeskonnaliikmed lahkusid poole töö pealt, mis tegi vajaliku tulemuse saavutamise väga raskeks. Kokkuvõttes andis see kõik juurde vajalikku praktilist kogemust meeskonnatöö osas.",
     },
     {
-        id: 3,
+        id: 4,
         // date: "Märts 4, 2022",
         date: "Märts 2022",
         title: "Andmemudeid & planeerimine",
@@ -46,12 +59,12 @@ export const projects = [
         p2: "rohkem ei oska öelda",
     },
     {
-        id: 4,
+        id: 5,
         // date: "Märts 25, 2022",
         date: "Märts 2022",
         title: "Andres Kõljalg E-Portfoolio",
         image: getImg("andres_koljalg_portfolio.png"),
-        lang: "JS/HTML/CSS",
+        lang: "VueJS/Tailwind",
         github: "https://github.com/andreskoljalg/andres-koljalg-portfolio",
         figma: "",
         online: "https://andres-koljalg-portfolio.pages.dev/",
@@ -60,18 +73,44 @@ export const projects = [
         p3: "Paratamatult pidin ma terve projekti port'ima Vue.js raamistiku peale ja ümber ehitama terve saidi back-end'i süsteemi mis oli pehmelt öeldes piinarikas. Vähemalt nüüd tean, et raamistik on alati vajalik, ükskõik kui suur või väike su projekt tundub.",
     },
     {
-        id: 5,
+        id: 6,
         // date: "Aprill 6, 2022",
         date: "Aprill 2022",
         title: "Muusika poe veebileht",
         image: getImg("music_instrument_store.png"),
-        lang: "VUEJS/HTML",
+        lang: "VueJS/Tailwind",
         github: "https://github.com/TimTimDev/timo-lopuproje",
         figma: "",
         online: "",
         p1: "Basically suht timm blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla",
         p2: "rohkem ei oska öelda",
-    }
+    },
+    {
+        id: 7,
+        // date: "Mai 18, 2022",
+        date: "Mai 2022",
+        title: "Python Image Downscaler",
+        image: getImg("python.jpg"),
+        lang: "Python",
+        github: "https://github.com/freduard/python-image-downscaler",
+        figma: "",
+        online: "",
+        p1: "Tegin selle skripti yhe oma kliendi jaoks kellel oli vaja suures mahus pilte töötelda. See skript skalleerib kõikide piltide resolutsiooni antud protsendi võrra vähemaks ühe folderi sees. Seejärel teeb folderile koopia ja asetab kõik töödeldud pildid sinna sisse.",
+        p2: "See osutus palju keerulisemaks kui algselt arvasin, kuna kogu aeg tuli aina rohkem ja rohkem asju juurde millega pidin arvestama. Nagu näiteks mitme operatsioonisüsteemi toetus. Poole peal leidsin ka koodis suure loogika vea misjärel pidin enamus skripti ümber kirjutama palju keerulisema loogikaga."
+    },
+    {
+        id: 8,
+        // date: "September 28, 2022",
+        date: "September 2022",
+        title: "Growtopia Trainer",
+        image: getImg("gt.jpg"),
+        lang: "C#",
+        github: "",
+        figma: "",
+        online: "",
+        p1: "Otsustasin häki või niiöelda 'Trainer'i kallal hakata töötama kui sõpredega tuli suvakas idee seda teha. 'Trainer' tähendab mingisugust programmi millel on suur kollektsioon häkke mingisugusele mängule, nagu näiteks Growtopiale. See ka, nagu tavaliselt, osutus suuremaks ja keerulisemaks projektiks kui ma algselt arvasin. Plaanin lisada veel paljusi feature'eid. Hiljuti sain just valmis MAC aadressi muutja, mis oli suur ettevõtmine kuna pidin õppima kuidas MAC aadressid töötavad, kuidas Windows nendest aru saab ja kasutab ning kuidas MAC aadressi üldse muuta saab.",
+        p2: "Hetkel on selle projekti GitHub privaatne, kuid on plaan see kunagi avalikuks teha kui see valmis saab. Kuid sinnani on veel kaua aega, sest selle arendamine on üllatavalt aeganõudev ja mul on veel palju õppida programmide ja häkkide arendamisel.",
+    },
 ]
 
 projects.reverse();
