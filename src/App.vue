@@ -13,7 +13,7 @@ export default {
   <div class="h-screen w-screen bg-zinc-900 p-4 lg:p-12 grid grid-rows-6 lg:grid-cols-3 lg:grid-rows-none gap-4 lg:gap-12">
       <SideNavVue />
 
-      <div class="lg:flex lg:col-span-2 row-span-5 lg:row-span-1 bg-zinc-800 h-full rounded drop-shadow-md p-4 lg:p-12 flex-col justify-between items-center overflow-x-hidden">
+      <div class="lg:flex lg:col-span-2 row-span-5 lg:row-span-1 bg-zinc-800 h-full rounded drop-shadow-md p-4 lg:p-12 flex-col justify-between items-center overflow-x-hidden componentWrapper">
         <router-view v-slot="{ Component, route }">
           <transition name="route" mode="out-in">
             <div :key="route.fullPath">
@@ -43,6 +43,10 @@ export default {
 
 .route-leave-active {
   transition: all 0.3s ease-in;
+}
+
+.componentWrapper > div {
+  width: 100%;
 }
 </style>
 
