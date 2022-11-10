@@ -7,7 +7,6 @@
             <div class="p-2 text-xl"><p>{{document.title}}</p></div>
             <embed type="application/pdf" class="w-full h-96 rounded-b" :src="document.document" style="object-fit: cover;">
         </div>
-
     </div>
 </template>
 
