@@ -1,11 +1,5 @@
-<script>
+<script setup>
 import SideNavVue from './components/SideNav.vue';
-
-export default {
-  components: {
-    SideNavVue
-  }
-}
 </script>
 
 <template>
