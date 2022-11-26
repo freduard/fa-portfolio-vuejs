@@ -1,3 +1,3 @@
-# Portfolio V3
+# Portfolio 3.0
 
-This is the third version of my portfolio using [Vue.js](https://vuejs.org/) which I should've done from the start. Designed by [Andres Kõljalg](https://github.com/andreskoljalg).
+This is the third version of my portfolio using [Vue.js](https://vuejs.org/) & [TailwindCSS](https://tailwindcss.com/).
