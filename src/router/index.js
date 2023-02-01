@@ -12,17 +12,17 @@ const routes = [
         component: Index
     },
     {
-        path: '/Projects.vue',
+        path: '/Projects',
         name: 'Projects',
         component: Projects
     },
     {
-        path: '/Documents.vue',
+        path: '/Documents',
         name: 'Documents',
         component: Documents
     },
     {
-        path: '/Project.vue',
+        path: '/Project',
         name: 'Project',
         component: Project,
         props(route){
@@ -30,7 +30,7 @@ const routes = [
         }
     },
     {
-        path: '/Contact.vue',
+        path: '/Contact',
         name: 'Contact',
         component: Contact,
         props(route){

@@ -1,11 +1,14 @@
+<script setup>
+import Header from '../components/Header.vue';
+</script>
+
 <template>
-    <p class="text-5xl md:text-6xl lg:text-8xl mb-2">Tere,</p>
-    <div class="flex flex-col gap-4 text-xl md:text-2xl lg:text-2xl">
-        <p>Olen Fredy ja alustasin programmeerimisega juba 9-aastaselt ning arvan, et olen selle ajaga jõudnud päris kaugele. 
-        Nooremana nokitsesin GameMaker stuudioga, Javaga, veidi Pythoniga ja videote monteerimisega.</p>
-        <p>Tänapäeval kasutan mitu erinvat keelt nagu C#, Pythonit, JavaScripti ja PHP'd.</p>
-        <p>Vabal ajal meeldib mulle luua rakendusi, skripte ja veebisaite.</p>
+    <Header position="fixed" :bg-on-scroll="false"/>
+    <div class="h-screen text-white">
+        <img src="../assets/images/bmw.jpg" alt="bmw" id="bgImage" class="fixed h-screen w-screen" style="object-fit: cover; filter: brightness(0.5) blur(100px) saturate(0.5); scale: 1.5; z-index: -50;">
+        <div class="p-48">
+            <h1 class="text-7xl font-bold">Fredy Ait</h1>
+
+        </div>
     </div>
-    <!-- <router-link :to="{ path: '/Contact.vue', query: { state: 0 }}">Contact</router-link> -->
-    <!-- <Projects /> -->
 </template>
