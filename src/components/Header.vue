@@ -54,9 +54,6 @@ onMounted(() => {
 </script>
 
 <template>
-    <!-- <header class="h-16 md:hidden flex w-full justify-between sm:px-12 md:px-24 z-50 lg:px-48 duration-200">
-        
-    </header> -->
     <header class="h-16 md:h-[10vh] flex w-full justify-between px-4 sm:px-12 md:px-24 z-50 lg:px-48 py-4 duration-200">
         <img src="../assets/logos/fa_logo.svg"  alt="" class="h-full md:hidden">
         <nav class="md:hidden flex items-center font-bold text-[#ddd] border-[#ddd] text-xs 2xl:text-sm">
@@ -78,7 +75,7 @@ onMounted(() => {
                 </div>
             </div>
             <router-link to="/Documents" class="h-full flex items-center border-b-2 border-transparent px-2 2xl:px-4 hover:text-white hover:border-white duration-200 drop-shadow">DOKUMENDID</router-link>
-            <router-link to="/Contact" class="h-full flex items-center border-b-2 border-transparent px-2 2xl:px-4 hover:text-white hover:border-white duration-200 drop-shadow">KONTAKT</router-link>
+            <router-link :to="{ path: '/Contact', query: { state: 0 }}" class="h-full flex items-center border-b-2 border-transparent px-2 2xl:px-4 hover:text-white hover:border-white duration-200 drop-shadow">KONTAKT</router-link>
         </nav>
     </header>
 </template>
