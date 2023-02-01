@@ -1,13 +1,13 @@
 <script setup>
+import Header from '../components/Header.vue';
 import { documents } from '../documents.js'
 </script>
 
 <template>
-    <div class="flex justify-between mb-6 items-center">
-        <p class="text-2xl lg:text-6xl mr-[]">Dokumendid</p>
-    </div>
-    <div class="flex flex-col w-">
-        <div v-for="(document, index) in documents" :key="index" class="duration-300 ease-in-out bg-zinc-700 rounded drop-shadow-md hover:bg-slate-600 mb-6">
+    <Header position="fixed" :bg-on-scroll="true" :bg-clear="false"/>
+    <div class="flex flex-col bg-zinc-700 min-h-screen px-4 sm:px-12 md:px-24 lg:px-48 py-24 text-white">
+        <h1 class="text-3xl 2xl:text-6xl mb-4 font-bold">Dokumendid</h1>
+        <div v-for="(document, index) in documents" :key="index" class="duration-300 ease-in-out bg-zinc-600 rounded drop-shadow-md hover:bg-slate-600 mb-6">
             <div class="p-2 text-xl"><p>{{document.title}}</p></div>
             <embed type="application/pdf" class="w-full h-96 rounded-b" :src="document.document" style="object-fit: cover;">
         </div>

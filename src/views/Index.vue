@@ -3,7 +3,7 @@ import Header from '../components/Header.vue';
 </script>
 
 <template>
-    <Header position="fixed" :bg-on-scroll="false"/>
+    <Header position="fixed" :bg-on-scroll="false" :bg-clear="true"/>
     <div class="h-screen text-white">
         <img src="../assets/images/bmw.jpg" alt="bmw" id="bgImage" class="fixed h-screen w-screen" style="object-fit: cover; filter: brightness(0.5) blur(100px) saturate(0.5); scale: 1.5; z-index: -50;">
         <div class="p-48">

@@ -38,16 +38,22 @@ import Header from './components/Header.vue'
 .route-enter-from {
   opacity: 0;
   transform: translateY(50px);
+  overflow: hidden;
+
 }
 .route-enter-active {
   transition: all 0.3s ease-out;
+  overflow: hidden;
+
 }
 .route-leave-to {
   opacity: 0;
   transform: translateY(-50px);
+  overflow: hidden;
 }
 .route-leave-active {
   transition: all 0.3s ease-in;
+  overflow: hidden;
 }
 
 html {

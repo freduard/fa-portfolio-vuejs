@@ -20,7 +20,7 @@ function sortBy() {
 </script>
 
 <template>
-    <Header position="fixed" :bg-on-scroll="true"/>
+    <Header position="fixed" :bg-on-scroll="true" :bg-clear="false"/>
     <div class="bg-zinc-700 min-h-screen px-4 sm:px-12 md:px-24 lg:px-48 py-24 text-white">
         <div class="flex justify-between mb-4">
             <h1 class="text-3xl font-bold">Projektid</h1>

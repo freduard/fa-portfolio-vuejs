@@ -12,17 +12,17 @@ const props = defineProps({
 </script>
 
 <template>
-    <Header position="" :bg-on-scroll="false"/>
+    <Header position="" :bg-on-scroll="false" :bg-clear="false"/>
     <ProjectNavVue :projectIndex="props.projectIndex" />
 
-    <div class="bg-zinc-600 text-white px-4 sm:px-12 md:px-24 lg:px-48 py-12">
+    <div class="bg-zinc-700 text-white px-4 sm:px-12 md:px-24 lg:px-48 py-12">
         <div class="w-fit flex flex-col gap-2">
             <p class="text-3xl lg:text-5xl font-bold">{{project.title}}</p>
         </div>
         <div class="flex flex-col gap-5 py-6">
             <p v-for="index in attrLength" :key="index" class="text-md md:text-xl">{{ project[`p${index}`] }}</p>
         </div>
-        <div class="flex justify-between mb-6 text-md lg:text-2xl">
+        <div class="flex justify-between mb-6 text-md md:text-xl">
             <div class="flex gap-1">
                 <a :href="project.github" v-if="project.github" target="_blank" class="hover:text-blue-300 duration-150 underline">github</a>
                 <p class="text-neutral-400 cursor-default select-none" v-else>github</p>
