@@ -24,7 +24,7 @@ function sortBy() {
     <div class="bg-zinc-700 min-h-screen px-4 sm:px-12 md:px-24 lg:px-48 py-24 text-white">
         <div class="flex justify-between mb-4">
             <h1 class="text-3xl font-bold">Projektid</h1>
-            <button v-on:click="sortBy" id="sortButton" class="bg-zinc-600 p-2 rounded hover:bg-slate-600 duration-150">Hilisemad</button>
+            <button v-on:click="sortBy" id="sortButton" class="bg-zinc-600 p-2 rounded hover:bg-slate-600 hover:drop-shadow-md duration-150">Hilisemad</button>
         </div>
         <router-link :to="{ path: '/Project', query: { projectIndex: projects.findIndex(item => item.id === project.id) }}" v-for="(project, index) in projects" :key="index" class="duration-150 bg-zinc-600 hover:bg-slate-600 rounded drop-shadow-md hover:bg-slate-60 md:h-32 md:grid flex flex-col md:grid-cols-3 mb-6">
             <img :src="project.image" class="rounded-t max-h-[300px] md:max-h-fit md:rounded-l md:h-full w-full row-span-1 md:col-span-1" style="object-fit: cover;">

@@ -70,7 +70,7 @@ onMounted(() => {
                     <router-link to="/Projects" class="h-full flex items-center border-b-2 border-transparent px-2 2xl:px-4 hover:text-white hover:border-white duration-200 drop-shadow gap-1">PROJEKTID</router-link>
                     <ChevronDownIcon class="w-5 h-5 mb-0.5 duration-300 ease-in-out dropDownBtn" />
                 </div>
-                <div class="bg-zinc-800 rounded top-[10vh] max-h-0 overflow-hidden absolute flex flex-col duration-300 ease-in-out z-50 drop-shadow-md" id="dropDownContents">
+                <div class="bg-zinc-600 rounded-b top-[10vh] max-h-0 overflow-hidden absolute flex flex-col duration-300 ease-in-out z-50 drop-shadow-md" id="dropDownContents">
                     <router-link class="py-1.5 hover:bg-slate-600 duration-150 px-1.5" :to="{ path: '/Project', query: { projectIndex: index }}" v-for="(project, index) in projects">{{ project.title }}</router-link>
                 </div>
             </div>

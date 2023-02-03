@@ -68,8 +68,8 @@ function projectNavigator(direction){
             <router-link :to="{ path: '/Project', query: { projectIndex: projectNavigator(true) }}" class="flex hover:bg-slate-600 p-2 rounded items-center justify-end gap-2 drop-shadow-md duration-150"><ArrowRightIcon class="w-5 mb-[1px]"/></router-link>
             <div class="w-full" id="navWrapper">
                 <div class="w-full flex flex-col rounded drop-shadow-none duration-150 bg-zinc-800 hover:bg-slate-600 hover:drop-shadow-md" id="navigationBar">
-                    <p class="p-1.5">Projektid / {{ project.title }}</p>
-                    <div class="flex flex-col top-9 w-full absolute duration-500 ease-in-out max-h-0 overflow-hidden rounded-b bg-zinc-800" id="navigationContents">
+                    <p class="p-1.5 text-sm sm:text-base">Projektid / {{ project.title }}</p>
+                    <div class="text-sm sm:text-base flex flex-col top-8 sm:top-9 w-full absolute duration-500 ease-in-out max-h-0 overflow-hidden rounded-b bg-zinc-800" id="navigationContents">
                         <router-link class="py-1.5 hover:bg-slate-600 duration-150 px-1.5" :to="{ path: '/Project', query: { projectIndex: index }}" v-for="(project, index) in projects">{{ project.title }}</router-link>
                     </div>
                 </div>

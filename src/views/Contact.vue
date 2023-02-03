@@ -17,7 +17,7 @@ const props = defineProps({
             <p class="text-xl text-center">Midagi läks valesti! Kontakteeru minuga otse: <a href="mailto:aitfredy@gmail.com" class="underline">aitfredy@gmail.com</a></p>
         </div>
         <form class="w-full px-4 sm:px-12 md:px-24 z-50 lg:px-48 xl:w-1/2 xl:px-0" action="https://tak21fredyait.itmajakas.ee/" method="post">
-            <p class="text-3xl md:text-4xl xl:text-5xl font-bold mb-3 xl:mb-6 lg:mr-24">Kontakteeru</p>
+            <p class="text-3xl md:text-4xl xl:text-5xl font-bold mb-3 xl:mb-6 lg:mr-24">Kontakt</p>
             <div class="flex flex-col gap-3">
                 <div>
                     <p class="text-md md:text-xl">Nimi</p>
