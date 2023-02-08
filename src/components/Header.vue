@@ -9,44 +9,25 @@ import { onMounted } from 'vue';
 
 const props = defineProps({
     position: String,
-    bgOnScroll: Boolean,
-    bgClear: Boolean
+    currentSection: String,
 })
+
+function slideTo(index) {
+  const swiper = document.querySelector('.swiper').swiper;
+  swiper.slideTo(index)
+}
+
+const headers = [
+    'KODU',
+    'PROJETKID',
+    'KONTAKT'
+]
 
 onMounted(() => {
     const header = document.querySelector('header')
-    const dropDownBtn = document.getElementsByClassName('dropDownBtn')[0]
-    const dropDownContents = document.getElementById('dropDownContents')
-
-    dropDownBtn.addEventListener('click', () => {
-        if(dropDownBtn.style.transform != 'rotate(180deg)'){
-            dropDownBtn.style.transform = 'rotate(180deg)'
-            dropDownContents.style.maxHeight = '230px'
-            
-        } else {
-            dropDownBtn.style.transform = 'rotate(0deg)'
-            dropDownContents.style.maxHeight = '0'
-        }
-        
-    })
 
     if(props.position != ""){
         header.classList.add(props.position)
-    }
-
-    if(props.bgOnScroll){
-        window.addEventListener('scroll', () => {
-            if(scrollY > 30) {
-                header.classList.add('drop-shadow-md')
-            }
-            else {
-                header.classList.remove('drop-shadow-md')
-            }
-        })
-    }
-    
-    if(!props.bgClear) {
-        header.classList.add('bg-zinc-600')
     }
 })
 
@@ -54,34 +35,16 @@ onMounted(() => {
 </script>
 
 <template>
-    <header class="h-16 md:h-[10vh] flex w-full justify-between px-4 sm:px-12 md:px-24 z-50 lg:px-48 py-4 duration-200">
-        <img src="../assets/logos/fa_logo.svg"  alt="" class="h-full md:hidden">
-        <nav class="md:hidden flex items-center font-bold text-[#ddd] border-[#ddd] text-xs 2xl:text-sm">
-            <router-link class="border-b-2 border-transparent p-2 flex justify-center items-center" to="/" ><HomeIcon class="w-8"/></router-link>
-            <router-link class="border-b-2 border-transparent p-2 flex justify-center items-center" to="/Projects" ><CodeIcon class="w-8"/></router-link>
-            <router-link class="border-b-2 border-transparent p-2 flex justify-center items-center" to="/Documents" ><DocumentTextIcon class="w-8"/></router-link>
-            <router-link class="border-b-2 border-transparent p-2 flex justify-center items-center" :to="{ path: '/Contact', query: { state: 0 }}" ><PhoneIcon class="w-8"/></router-link>
-        </nav>
-        <img src="../assets/logos/fa_logo.svg"  alt="" class="hidden md:block h-full">
-        <nav class="hidden md:flex items-center gap-5 font-bold text-[#ddd] border-[#ddd] text-xs">
-            <router-link to="/" class="h-full flex items-center border-b-2 border-transparent px-2 2xl:px-4 hover:text-white hover:border-white duration-200 drop-shadow">KODU</router-link>
-            <div class="h-full flex justify-center">
-                <div class="flex h-full items-center">
-                    <router-link to="/Projects" class="h-full flex items-center border-b-2 border-transparent px-2 2xl:px-4 hover:text-white hover:border-white duration-200 drop-shadow gap-1">PROJEKTID</router-link>
-                    <ChevronDownIcon class="w-5 h-5 mb-0.5 duration-300 ease-in-out dropDownBtn" />
-                </div>
-                <div class="bg-zinc-600 rounded-b top-[10vh] max-h-0 overflow-hidden absolute flex flex-col duration-300 ease-in-out z-50 drop-shadow-md" id="dropDownContents">
-                    <router-link class="py-1.5 hover:bg-slate-600 duration-150 px-1.5" :to="{ path: '/Project', query: { projectIndex: index }}" v-for="(project, index) in projects">{{ project.title }}</router-link>
-                </div>
-            </div>
-            <router-link to="/Documents" class="h-full flex items-center border-b-2 border-transparent px-2 2xl:px-4 hover:text-white hover:border-white duration-200 drop-shadow">DOKUMENDID</router-link>
-            <router-link :to="{ path: '/Contact', query: { state: 0 }}" class="h-full flex items-center border-b-2 border-transparent px-2 2xl:px-4 hover:text-white hover:border-white duration-200 drop-shadow">KONTAKT</router-link>
-        </nav>
+    <header class="h-12 z-50 text-white items-center fixed w-full flex justify-between px-2 sm:px-12 md:px-24 lg:px-36 2xl:px-56 font-['quicksand'] font-semibold">
+        <button class="h-full" v-on:click="slideTo(0)"><img src="../assets/logos/fa_logo.svg" class="h-full p-2" alt=""></button>
+        <div class="flex h-full">
+            <button v-for="(header, index) in headers" :key="header" v-on:click="slideTo(index)" :class="[{ active: index == currentSection }, `h-full hover:bg-white text-sm hover:text-black hover:drop-shadow-md duration-150 flex items-center px-4`]">{{ header }}</button>
+        </div>
     </header>
 </template>
 
 <style scoped>
-.router-link-active {
-    border-color: white;
+.active {
+    color: rgb(244 63 94);
 }
 </style>

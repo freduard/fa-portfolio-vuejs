@@ -1,44 +1,70 @@
 <script setup>
-import Header from '../components/Header.vue';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Pagination, Navigation } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
 import { projects } from '../projects.js'
-import { getCurrentInstance } from 'vue'
 
-const instance = getCurrentInstance();
-
-let sortByLatest = true;
-
-function getShortDesc (pIndex) {
-    return projects[pIndex].p1.substring(0, 100) + '...';
-}
-
-function sortBy() {
-    projects.reverse();
-    instance.proxy.$forceUpdate();
-    sortByLatest = sortByLatest ? false : true;
-    document.getElementById('sortButton').innerText = sortByLatest ? 'Hilisemad' : 'Varasemad';
-}
+const modules = [
+    Pagination,
+    Navigation
+]
 </script>
 
 <template>
-    <Header position="fixed" :bg-on-scroll="true" :bg-clear="false"/>
-    <div class="bg-zinc-700 min-h-screen px-4 sm:px-12 md:px-24 lg:px-48 py-24 text-white">
-        <div class="flex justify-between mb-4">
-            <h1 class="text-3xl font-bold">Projektid</h1>
-            <button v-on:click="sortBy" id="sortButton" class="bg-zinc-600 p-2 rounded hover:bg-slate-600 hover:drop-shadow-md duration-150">Hilisemad</button>
+    <section id="1" class="bg-white top-0 w-full"></section>
+    <div class="pt-24 pb-12 md:gap-0 md:pb-0 md:pt-12 px-2 md:p-24 sm:px-12 md:px-24 lg:px-36 2xl:px-56 flex flex-col justify-center h-full w-full font-['quicksand'] text-white">
+        <div class="">
+            <h1 class="text-5xl lg:text-6xl font-bold font-['mrdafoe'] w-fit">
+                PROJEKTID
+                <div class="flex gap-6 font-['quicksand'] font-semibold text-base">
+                    <div class="flex gap-1">
+                        <h1 class="text-rose-500">KOKKU</h1>
+                        <p>{{ projects.length }}</p>
+                    </div>
+                    <div class="flex gap-1">
+                        <h1 class="text-rose-500">KLIENTE</h1>
+                        <p>2</p>
+                    </div>
+                </div>
+            </h1>
         </div>
-        <router-link :to="{ path: '/Project', query: { projectIndex: projects.findIndex(item => item.id === project.id) }}" v-for="(project, index) in projects" :key="index" class="duration-150 bg-zinc-600 hover:bg-slate-600 rounded drop-shadow-md hover:bg-slate-60 md:h-32 md:grid flex flex-col md:grid-cols-3 mb-6">
-            <img :src="project.image" class="rounded-t max-h-[300px] md:max-h-fit md:rounded-l md:h-full w-full row-span-1 md:col-span-1" style="object-fit: cover;">
-            <div class="flex flex-col justify-between h-fit md:h-full p-2 row-span-1 md:col-span-2">
-                <div>
-                    <h1 class="text-xl lg:text-2xl font-['CourierBold']">{{project.title}}</h1>
-                    <p class="md:max-h-[48px] w-full overflow-hidden">{{ getShortDesc(index) }}{{ getShortDesc(index) }}</p>
-                </div>
-                <div class="flex justify-between">
-                    <p class="text-neutral-300">{{project.date}}</p>
-                    <p class="text-blue-300">{{project.lang}}</p>
-                </div>
-            </div>
-        </router-link>
+
+        <div class="flex items-center left-0">
+            <swiper 
+                class="w-full py-12"
+                :modules="modules"
+                :pagination="{
+                    clickable: true,
+                }"
+                :navigation="true"
+                :breakpoints="{
+                    '640': {
+                        slidesPerView: 2,
+                        spaceBetween: 12
+                    },
+                    '1024': {
+                        slidesPerView: 3,
+                        spaceBetween: 24
+                    }
+                }"
+                >
+                <swiper-slide v-for="(project, index) in projects" :key="index" class="gap-2 bg-neutral-700 rounded proj-card">
+                    <img :src="project.image" class="rounded-t h-64 sm:h-48 w-full grayscale duration-150" style="object-fit: cover;">
+                    <div class="p-2">
+                        <h1 class="text-rose-500 font-semibold truncate">{{project.title}}</h1>
+                        <p class="line-clamp-3">{{ project.p1 }}</p>
+                        <div class="flex justify-between text-neutral-300">
+                            <p class="truncate">{{project.date}}</p>
+                            <p class="text-indigo-200 truncate">{{project.lang}}</p>
+                        </div>
+                    </div>
+                    
+                </swiper-slide>
+            </swiper>
+        </div>
     </div>
     <!-- <div class="flex justify-between mb-6 items-center">
         <p class="text-2xl lg:text-6xl">Projektid</p>
