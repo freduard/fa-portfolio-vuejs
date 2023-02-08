@@ -8,18 +8,8 @@ import Contact from '../views/Contact.vue'
 const routes = [
     {
         path: '/',
-        name: 'Index',
-        component: Index
-    },
-    {
-        path: '/Projects',
         name: 'Projects',
         component: Projects
-    },
-    {
-        path: '/Documents',
-        name: 'Documents',
-        component: Documents
     },
     {
         path: '/Project',
@@ -27,14 +17,6 @@ const routes = [
         component: Project,
         props(route){
             return { projectIndex: route.query.projectIndex }
-        }
-    },
-    {
-        path: '/Contact',
-        name: 'Contact',
-        component: Contact,
-        props(route){
-            return { state: route.query.state }
         }
     }
 ]

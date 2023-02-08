@@ -57,10 +57,18 @@ onMounted(() => {
     }"
     >
       <swiper-slide data-hash="0" class="overflow-hidden">
+        <section id="0" class="bg-white w-full"></section>
         <Index />
       </swiper-slide>
-      <swiper-slide data-hash="1">
-        <Projects />
+      <swiper-slide data-hash="1" class="router-slide">
+        <section id="1" class="bg-white top-0 w-full"></section>
+        <router-view v-slot="{ Component, route }">
+          <transition name="route" mode="out-in">
+            <div :key="route.fullPath">
+              <component :is="Component" />
+            </div>
+          </transition>
+        </router-view>
       </swiper-slide>
       <swiper-slide data-hash="2">
         <section id="2" class="bg-white w-full"></section>

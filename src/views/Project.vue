@@ -1,10 +1,12 @@
 <script setup>
-import Header from '../components/Header.vue';
 import { projects } from '../projects.js'
-import ProjectNavVue from '../components/ProjectNav.vue'
 
 const project = projects[props.projectIndex]
 const attrLength = Object.keys(project).length - 7
+
+function titleToUpper(title) {
+    return title.toUpperCase()
+}
 
 const props = defineProps({
     projectIndex: String
@@ -12,34 +14,28 @@ const props = defineProps({
 </script>
 
 <template>
-    <Header position="" :bg-on-scroll="false" :bg-clear="false"/>
-    <ProjectNavVue :projectIndex="props.projectIndex" />
-
-    <div class="bg-zinc-700 text-white px-4 sm:px-12 md:px-24 lg:px-48 py-12">
-        <div class="w-fit flex flex-col gap-2">
-            <p class="text-3xl lg:text-5xl font-bold">{{project.title}}</p>
-        </div>
-        <div class="flex flex-col gap-5 py-6">
-            <p v-for="index in attrLength" :key="index" class="text-md md:text-xl">{{ project[`p${index}`] }}</p>
-        </div>
-        <div class="flex justify-between mb-6 text-md md:text-xl">
-            <div class="flex gap-1">
-                <a :href="project.github" v-if="project.github" target="_blank" class="hover:text-blue-300 duration-150 underline">github</a>
-                <p class="text-neutral-400 cursor-default select-none" v-else>github</p>
-                <p>•</p>
-                <a :href="project.figma" v-if="project.figma" target="_blank" class="hover:text-blue-300 duration-150 underline">figma</a>
-                <p class="text-neutral-400 cursor-default select-none" v-else>figma</p>
-                <p>•</p>
-                <a :href="project.online" v-if="project.online" target="_blank" class="hover:text-blue-300 duration-150 underline">online</a>
-                <p class="text-neutral-400 cursor-default select-none" v-else>online</p>
+    <div class="pt-24 pb-12 gap-6 md:pb-0 md:pt-12 px-2 md:p-24 sm:px-12 md:px-24 lg:px-36 2xl:px-56 flex flex-col h-full justify-center text-white">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-['mrdafoe'] w-fit">
+            {{ titleToUpper(project.title) }}
+        </h1>
+        <div class="flex flex-col gap-2">
+            <div class="flex text-sm lg:text-base font-bold font-['quicksand'] justify-between">
+                <div class="flex gap-3">
+                    <a :href="project.github" v-if="project.github" target="_blank" class="hover:text-rose-500 duration-150">GITHUB</a>
+                    <p class="text-neutral-500 cursor-default select-none" v-else>GITHUB</p>
+                    <a :href="project.figma" v-if="project.figma" target="_blank" class="hover:text-slate-400 duration-150 underline">FIGMA</a>
+                    <p class="text-neutral-500 cursor-default select-none" v-else>FIGMA</p>
+                    <a :href="project.online" v-if="project.online" target="_blank" class="hover:text-slate-400 duration-150 underline">ONLINE</a>
+                    <p class="text-neutral-500 cursor-default select-none" v-else>ONLINE</p>
+                </div>
+                <div class="flex gap-1">
+                    <h1 class="text-rose-500">KUUPÄEV</h1>
+                    <p>{{ project.date }}</p>
+                </div>
             </div>
-            <div class="flex gap-1">
-                <p class="text-blue-300">{{project.lang}}</p>
-                <p>/</p>
-                <p>{{project.date}}</p>
-            </div>
+            <p v-for="index in attrLength" :key="index" class="md:text-xl">{{ project[`p${index}`] }}</p>
         </div>
-        <img :src="project.image" class="w-full rounded max-h-[500px]" style="object-fit: cover;" alt="">
+        <img :src="project.image" class="w-full rounded h-[15vw] hidden sm:block" style="object-fit: cover;" alt="">
     </div>
     <!-- <div class="flex flex-col gap-6 bg-zinc-700">
         

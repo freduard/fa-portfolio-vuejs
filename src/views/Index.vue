@@ -1,14 +1,16 @@
 <script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Pagination, Autoplay } from 'swiper';
+import { Pagination, Autoplay, EffectFade } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/effect-cards';
+import 'swiper/css/effect-fade';
 import { ChevronDownIcon } from '@heroicons/vue/outline';
+import { onMounted } from 'vue';
 
 const modules = [
     Pagination,
     Autoplay,
+    EffectFade
 ]
 
 function slideNext() {
@@ -23,17 +25,22 @@ function slidePrev() {
   const swiper = document.querySelector('.swiper.pede').swiper;
   swiper.slidePrev()
 }
+
+onMounted(() => {
+    setTimeout(() => {
+        document.getElementById('scrollHint').style.opacity = 1
+    }, 7500)
+})
 </script>
 
 <template>
     <img src="../assets/images/bmw.jpg" alt="bmw" id="bgImage" class="fixed h-screen w-screen" style="object-fit: cover; filter: brightness(0.5) blur(100px) saturate(0.5); scale: 1.5; z-index: -50;">
-    <section id="0" class="bg-white w-full"></section>
-    <div class="h-full w-full text-white pt-24 pb-12 gap-16 md:gap-0 md:pb-0 md:pt-0 px-2 sm:px-12 md:px-24 lg:px-36 2xl:px-56 flex flex-col md:grid md:grid-cols-2 justify-center">
+    <div class="h-full w-full text-white pt-24 pb-12 gap-16 md:gap-0 md:pb-0 md:pt-0 px-2 sm:px-12 md:px-24 lg:px-36 2xl:px-48 flex flex-col md:grid md:grid-cols-2 justify-center">
         <div class="flex flex-col items-center md:items-start justify-center gap-2">
-            <p class="hidden md:block text-sm md:text-base text-rose-500 font-['quicksand'] font-semibold">─ Tere, ma olen</p>
-            <p class="md:hidden text-sm md:text-base text-rose-500 font-['quicksand'] font-semibold">Tere, ma olen</p>
-            <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold font-['mrdafoe']">FREDY AIT</h1>
-            <p class="text-sm md:text-base text-rose-500 font-['quicksand'] font-semibold">Noorem tarkvaraarendaja</p>
+            <p class="hidden md:block text-sm lg:text-base text-rose-500 font-['quicksand'] font-semibold">─ Tere, ma olen</p>
+            <p class="md:hidden text-sm lg:text-lg text-rose-500 font-['quicksand'] font-semibold">Tere, ma olen</p>
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold font-['mrdafoe']">FREDY AIT</h1>
+            <p class="text-sm lg:text-lg text-rose-500 font-['quicksand'] font-semibold">Noorem tarkvaraarendaja</p>
         </div>
         <div class="flex flex-col justify-center font-['quicksand']">
             <swiper 
@@ -46,20 +53,22 @@ function slidePrev() {
                 delay: 5000,
                 disableOnInteraction: true
             }"
+            :effect="'fade'"
+            :fade-effect="{
+                crossFade: true
+            }"
             :speed="1000"
             >
-                <swiper-slide class="p-2 text-left flex flex-col justify-center gap-2">
-                    <h1 class="text-rose-500 font-semibold">MINUST</h1>
+                <swiper-slide class="p-2 text-left flex flex-col justify-center gap-2 sm:text-lg md:text-xl">
                     <p>Alustasin programmeerimisega juba 9-aastaselt ja olen selle ajaga omandanud palju.</p> 
                     <p>Nooremana nokitsesin GameMaker stuudioga, Javaga, Pythoniga ja videote monteerimisega.</p>
                 </swiper-slide>
-                <swiper-slide class="p-2 text-left flex flex-col justify-center gap-2">
-                    <h1 class="text-rose-500 font-semibold">TEGEVUSED</h1>
+                <swiper-slide class="p-2 text-left flex flex-col justify-center gap-2 sm:text-lg md:text-xl">
                     <p>Tänapäeval kasutan mitu erinvat keelt nagu C#, Pythonit, JavaScripti ja PHP'd.</p>
                     <p>Vabal ajal meeldib mulle luua rakendusi, skripte ja veebisaite.</p>
                 </swiper-slide>
-                <swiper-slide class="p-2 text-left flex flex-col justify-center">
-                    <h1 class="text-rose-500 font-semibold">OSKUSED</h1>
+                <swiper-slide class="p-2 text-left flex flex-col justify-center gap-2 sm:text-lg md:text-xl">
+                    <p>Oskan...</p>
                     <ul>
                         <li>- HTML, JS/Vue.js, CSS/Tailwind (font-end)</li>
                         <li>- PHP & SQL (back-end)</li>
@@ -69,7 +78,7 @@ function slidePrev() {
                 </swiper-slide>
             </swiper>
         </div>
-        <div class="h-12 w-full absolute bottom-0 left-0 flex justify-center items-center font-['quicksand'] font-semibold">
+        <div class="h-12 w-full absolute bottom-0 left-0 flex justify-center items-center font-['quicksand'] font-semibold opacity-0 delay-[5000] duration-1000" id="scrollHint">
             <button v-on:click="slideProjects" class="h-full hover:text-rose-500 text-sm hover:drop-shadow-md duration-150 flex items-center px-4">
                 <h1 class="flex items-center gap-2"><ChevronDownIcon class="h-4"/>PROJEKTID<ChevronDownIcon class="h-4"/></h1>
             </button>
