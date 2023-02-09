@@ -50,7 +50,7 @@ export const projects = [
         // date: "Märts 4, 2022",
         date: "04/03/22",
         title: "Andmemudeid & planeerimine",
-        image: getImg("datamodels_project_planning.webp"),
+        image: getImg("datamodels_project_planning.jpg"),
         lang: "None",
         github: "https://github.com/angsuuu/Project-5---Team-8",
         figma: "",

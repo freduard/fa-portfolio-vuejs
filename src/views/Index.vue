@@ -39,7 +39,7 @@ onMounted(() => {
         <div class="flex flex-col items-center md:items-start justify-center gap-2">
             <p class="hidden md:block text-sm lg:text-base text-rose-500 font-['quicksand'] font-semibold">─ Tere, ma olen</p>
             <p class="md:hidden text-sm lg:text-lg text-rose-500 font-['quicksand'] font-semibold">Tere, ma olen</p>
-            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold font-['mrdafoe']">FREDY AIT</h1>
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl 2xl:text-8xl font-bold font-['mrdafoe']">FREDY AIT</h1>
             <p class="text-sm lg:text-lg text-rose-500 font-['quicksand'] font-semibold">Noorem tarkvaraarendaja</p>
         </div>
         <div class="flex flex-col justify-center font-['quicksand']">
