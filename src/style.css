@@ -23,25 +23,10 @@ html {
     background-color: rgb(244 63 94) !important;
 }
 
-.swiper-button-next,
-.swiper-container-rtl .swiper-button-prev,
-.swiper-button-prev, 
-.swiper-container-rtl .swiper-button-next{
-    background-image: none !important;
-}
-
 .swiper-button-next, .swiper-button-prev {
     opacity: .33;
     color: white;
     transition: all 0.15s;
-}
-
-.swiper-button-next {
-    padding-right: 2rem;
-}
-
-.swiper-button-prev {
-    padding-left: 2rem;
 }
 
 .swiper-button-next:hover, .swiper-button-prev:hover {

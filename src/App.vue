@@ -45,7 +45,7 @@ onMounted(() => {
     :hash-navigation="{
       watchState: true,
     }"
-    :slides-per-view="1"  
+    :slides-per-view="'auto'"  
     :speed="400"  
     :direction="'vertical'"
     :mousewheel="true"
@@ -56,11 +56,11 @@ onMounted(() => {
       }
     }"
     >
-      <swiper-slide data-hash="0" class="overflow-hidden">
+      <swiper-slide data-hash="0" class="overflow-hidden min-h-screen">
         <section id="0" class="bg-white w-full"></section>
         <Index />
       </swiper-slide>
-      <swiper-slide data-hash="1" class="router-slide">
+      <swiper-slide data-hash="1" class="router-slide min-h-screen">
         <section id="1" class="bg-white top-0 w-full"></section>
         <router-view v-slot="{ Component, route }">
           <transition name="route" mode="out-in">

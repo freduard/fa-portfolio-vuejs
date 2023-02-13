@@ -16,8 +16,7 @@ const modules = [
 </script>
 
 <template>
-    
-    <div class="flex flex-col justify-center h-full w-full font-['quicksand'] pt-12 text-white">
+    <div class="flex flex-col sm:justify-center h-full w-full font-['quicksand'] pt-16 sm:pt-12 text-white">
         <div class="px-2 sm:px-12 md:px-24 lg:px-36 2xl:px-48">
             <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold font-['mrdafoe'] w-fit">
                 PROJEKTID
@@ -33,9 +32,9 @@ const modules = [
                 </div>
             </h1>
         </div>
-        <div class="flex items-center left-0">
+        <div class="flex items-center">
             <swiper 
-                class="w-full px-4 py-8"
+                class="w-full px-2 sm:px-4 py-4 sm:py-8"
                 :modules="modules"
                 :scrollbar="{
                     draggable: true
@@ -48,16 +47,19 @@ const modules = [
                 :space-between="25"
                 :breakpoints="{
                     '450': {
-                        slidesPerView: 2
+                        slidesPerView: 2,
+                        spaceBetween: 10
                     },
                     '720': {
-                        slidesPerView: 3
+                        slidesPerView: 3,
+                        spaceBetween: 15
                     },
                     '1024': {
-                        slidesPerView: 4
+                        slidesPerView: 4,
+                        spaceBetween: 25
                     },
                     '1280': {
-                        slidesPerView: 5
+                        slidesPerView: 5,
                     }
                 }"
                 >

@@ -19,6 +19,7 @@ function slideNext() {
 }
 function slideProjects() {
   const swiper = document.querySelector('.swiper').swiper;
+  document.getElementById('scrollHint').style.opacity = 0;
   swiper.slideNext()
 }
 function slidePrev() {
@@ -35,7 +36,7 @@ onMounted(() => {
 
 <template>
     <img src="../assets/images/bmw.jpg" alt="bmw" id="bgImage" class="fixed h-screen w-screen" style="object-fit: cover; filter: brightness(0.5) blur(100px) saturate(0.5); scale: 1.5; z-index: -50;">
-    <div class="h-full w-full text-white pt-24 pb-12 gap-16 md:gap-0 md:pb-0 md:pt-0 px-2 sm:px-12 md:px-24 lg:px-36 2xl:px-48 flex flex-col md:grid md:grid-cols-2 justify-center">
+    <div class="h-full w-full text-white pt-24 pb-12 sm:gap-16 gap-8 md:gap-0 md:pb-0 md:pt-0 px-2 sm:px-12 md:px-24 lg:px-36 2xl:px-48 flex flex-col md:grid md:grid-cols-2 sm:justify-center">
         <div class="flex flex-col items-center md:items-start justify-center gap-2">
             <p class="hidden md:block text-sm lg:text-base text-rose-500 font-['quicksand'] font-semibold">─ Tere, ma olen</p>
             <p class="md:hidden text-sm lg:text-lg text-rose-500 font-['quicksand'] font-semibold">Tere, ma olen</p>
@@ -78,8 +79,8 @@ onMounted(() => {
                 </swiper-slide>
             </swiper>
         </div>
-        <div class="h-12 w-full absolute bottom-0 left-0 flex justify-center items-center font-['quicksand'] font-semibold opacity-0 delay-[5000] duration-1000" id="scrollHint">
-            <button v-on:click="slideProjects" class="h-full hover:text-rose-500 text-sm hover:drop-shadow-md duration-150 flex items-center px-4">
+        <div class="h-12 w-full sm:absolute bottom-0 left-0 flex justify-center items-center font-['quicksand'] font-semibold opacity-0 delay-[5000] duration-1000" id="scrollHint">
+            <button v-on:click="slideProjects" class="h-full hover:text-rose-500 text-sm hover:drop-shadow-md duration-150 flex items-center px-4 ">
                 <h1 class="flex items-center gap-2"><ChevronDownIcon class="h-4"/>PROJEKTID<ChevronDownIcon class="h-4"/></h1>
             </button>
         </div>
