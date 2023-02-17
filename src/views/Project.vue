@@ -65,59 +65,33 @@ const props = defineProps({
                         </svg>
                     </router-link>
                 </h1>
-                <div class="flex text-sm lg:text-base font-bold font-['quicksand'] justify-between">
-                    <div class="flex gap-1 sm:gap-3">
-                        <a :href="project.github" v-if="project.github" target="_blank" class="hover:text-rose-500 duration-150">GITHUB</a>
-                        <p class="text-neutral-500 cursor-default select-none" v-else>GITHUB</p>
-                        <a :href="project.figma" v-if="project.figma" target="_blank" class="hover:text-rose-500 duration-150">FIGMA</a>
-                        <p class="text-neutral-500 cursor-default select-none" v-else>FIGMA</p>
-                        <a :href="project.online" v-if="project.online" target="_blank" class="hover:text-rose-500 duration-150">ONLINE</a>
-                        <p class="text-neutral-500 cursor-default select-none" v-else>ONLINE</p>
-                    </div>
-                    <div class="flex gap-1">
-                        <h1 class="text-rose-500">KUUPÄEV</h1>
-                        <p>{{ project.date }}</p>
-                    </div>
-                </div>
+                
                 <div class="flex flex-col gap-2 text-justify">
-                    <p v-for="p in attrLength" :key="p" class="text-sm sm:text-base">{{ project[`${p}`] }}</p>
-                    <div v-on:click="dropDown('imageDropdown' + project.id)" class="bg-neutral-700 rounded hover:bg-neutral-600 text-white hidden sm:block" :id="`imageDropdown` + project.id">
+                    <div class="flex text-sm lg:text-base font-bold font-['quicksand'] justify-between">
+                        <div class="flex gap-1 sm:gap-3">
+                            <a :href="project.github" v-if="project.github" target="_blank" class="hover:text-rose-500 duration-150">GITHUB</a>
+                            <p class="text-neutral-500 cursor-default select-none" v-else>GITHUB</p>
+                            <a :href="project.figma" v-if="project.figma" target="_blank" class="hover:text-rose-500 duration-150">FIGMA</a>
+                            <p class="text-neutral-500 cursor-default select-none" v-else>FIGMA</p>
+                            <a :href="project.online" v-if="project.online" target="_blank" class="hover:text-rose-500 duration-150">ONLINE</a>
+                            <p class="text-neutral-500 cursor-default select-none" v-else>ONLINE</p>
+                        </div>
+                        <div class="flex gap-1">
+                            <h1 class="text-rose-500">KUUPÄEV</h1>
+                            <p>{{ project.date }}</p>
+                        </div>
+                    </div>
+                    <p v-for="p in attrLength" :key="p" class="text-sm sm:text-base 2xl:text-lg">{{ project[`${p}`] }}</p>
+                    <div v-on:click="dropDown('imageDropdown' + project.id)" class="bg-neutral-700 rounded hover:bg-neutral-600 text-white duration-300 2xl:hidden" :id="`imageDropdown` + project.id">
                         <div class="flex justify-between" id="imgTextDiv">
-                            <h1 class="p-1 font-semibold duration-300">Images</h1>
+                            <h1 class="p-2 font-semibold text-sm sm:text-base duration-300">IMAGES</h1>
                             <ChevronDownIcon class="w-5 mr-1 duration-300" />
                         </div>
                         <img :src="project.image" class="rounded-b duration-300 max-h-[0px] w-full h-full" style="object-fit: cover;" alt="">
                     </div>
+                    <img :src="project.image" class="rounded w-full h-[35vh] hidden 2xl:block" style="object-fit: cover;" alt="">
                 </div>
             </swiper-slide>
         </swiper>
     </div>
-    <!-- <div class="pt-24 pb-12 gap-4 md:pb-0 md:pt-12 px-2 md:p-24 sm:px-12 md:px-24 lg:px-36 2xl:px-48 flex flex-col h-full justify-center text-white">
-        
-    </div> -->
-    <!-- <div class="flex flex-col gap-6 bg-zinc-700">
-        
-        <div class="max-h-96 flex justify-center items-center overflow-hidden">
-            <img :src="project.image" class="w-full rounded lg:h-80" style="object-fit: cover;" alt="">
-        </div>
-        <div class="w-fit">
-            <p class="text-3xl lg:text-4xl font-bold">{{project.title}}</p>
-            <div class="flex justify-between items-center text-xl">
-                <div>
-                    <p>{{project.date}}</p>
-                </div>
-            </div>
-        </div>
-        <p v-for="index in attrLength" :key="index" class="text-xl">{{ project[`p${index}`] }}</p>
-        <div class="flex gap-2 lg:gap-5 text-xl lg:text-2xl">
-            <a :href="project.github" v-if="project.github" target="_blank" class="hover:text-slate-400 duration-150 underline">github</a>
-            <p class="text-neutral-500 cursor-default select-none" v-else>github</p>
-            <p>•</p>
-            <a :href="project.figma" v-if="project.figma" target="_blank" class="hover:text-slate-400 duration-150 underline">figma</a>
-            <p class="text-neutral-500 cursor-default select-none" v-else>figma</p>
-            <p>•</p>
-            <a :href="project.online" v-if="project.online" target="_blank" class="hover:text-slate-400 duration-150 underline">online</a>
-            <p class="text-neutral-500 cursor-default select-none" v-else>online</p>
-        </div>
-    </div> -->
 </template>

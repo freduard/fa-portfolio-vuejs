@@ -16,6 +16,8 @@ const modules = [
 </script>
 
 <template>
+    <img src="../assets/images/desktopbg.png" alt="bmw" id="bgImage" class="fixed h-screen w-screen -z-50 saturate-0 opacity-50 hidden md:block" style="object-fit: cover;">
+    <img src="../assets/images/mobilebg.png" alt="bmw" id="bgImage" class="fixed h-screen w-screen -z-50 saturate-0  md:hidden" style="object-fit: cover;">
     <div class="flex flex-col sm:justify-center h-full w-full font-['quicksand'] pt-16 sm:pt-12 text-white">
         <div class="px-2 sm:px-12 md:px-24 lg:px-36 2xl:px-48">
             <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold font-['mrdafoe'] w-fit">

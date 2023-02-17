@@ -38,7 +38,7 @@ onMounted(() => {
     <img src="../assets/images/bmw.jpg" alt="bmw" id="bgImage" class="fixed h-screen w-screen" style="object-fit: cover; filter: brightness(0.5) blur(100px) saturate(0.5); scale: 1.5; z-index: -50;">
     <div class="h-full w-full text-white pt-24 pb-12 sm:gap-16 gap-8 md:gap-0 md:pb-0 md:pt-0 px-2 sm:px-12 md:px-24 lg:px-36 2xl:px-48 flex flex-col md:grid md:grid-cols-2 sm:justify-center">
         <div class="flex flex-col items-center md:items-start justify-center gap-2">
-            <p class="hidden md:block text-sm lg:text-base text-rose-500 font-['quicksand'] font-semibold">─ Tere, ma olen</p>
+            <p class="hidden md:block text-sm lg:text-lg text-rose-500 font-['quicksand'] font-semibold">─ Tere, ma olen</p>
             <p class="md:hidden text-sm lg:text-lg text-rose-500 font-['quicksand'] font-semibold">Tere, ma olen</p>
             <h1 class="text-5xl sm:text-6xl lg:text-7xl 2xl:text-8xl font-bold font-['mrdafoe']">FREDY AIT</h1>
             <p class="text-sm lg:text-lg text-rose-500 font-['quicksand'] font-semibold">Noorem tarkvaraarendaja</p>
