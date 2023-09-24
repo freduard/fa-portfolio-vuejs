@@ -53,3 +53,7 @@ html {
 .router-slide > div {
     height: 100%;
 }
+
+.test {
+    padding-bottom: env(safe-area-inset-bottom);
+}
