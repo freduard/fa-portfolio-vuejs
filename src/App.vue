@@ -40,7 +40,7 @@ onMounted(() => {
     <Header position="fixed" :current-section="currentSection" />
     
     <swiper 
-    class="h-screen w-screen"
+    class="h-[100dvh] w-screen"
     :hash-navigation="{
       watchState: true,
     }"

@@ -36,7 +36,7 @@ onMounted(() => {
 
 <template>
     <img src="../assets/images/bmw.jpg" alt="bmw" id="bgImage" class="fixed h-screen w-screen" style="object-fit: cover; filter: brightness(0.5) blur(100px) saturate(0.5); scale: 1.5; z-index: -50;">
-    <div class="h-full w-full text-white pt-24 pb-12 sm:gap-16 gap-8 md:gap-0 md:pb-0 md:pt-0 px-2 sm:px-12 md:px-24 lg:px-36 2xl:px-48 flex flex-col md:grid md:grid-cols-2 sm:justify-center">
+    <div class="h-full w-full text-white pt-24 pb-12 sm:gap-16 gap-8 md:gap-0 md:pb-0 md:pt-0 px-2 sm:px-12 md:px-24 lg:px-36 2xl:px-48 flex flex-col md:grid md:grid-cols-2 justify-center">
         <div class="flex flex-col items-center md:items-start justify-center gap-2">
             <p class="hidden md:block text-sm lg:text-lg text-rose-500 font-['quicksand'] font-semibold">─ Tere, ma olen</p>
             <p class="md:hidden text-sm lg:text-lg text-rose-500 font-['quicksand'] font-semibold">Tere, ma olen</p>
@@ -58,7 +58,7 @@ onMounted(() => {
             :fade-effect="{
                 crossFade: true
             }"
-            :speed="1000"
+            :speed="500"
             >
                 <swiper-slide class="p-2 text-left flex flex-col justify-center gap-2 sm:text-lg md:text-xl">
                     <p>Alustasin programmeerimisega juba 9-aastaselt ja olen selle ajaga omandanud palju.</p> 
