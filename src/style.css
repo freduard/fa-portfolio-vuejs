@@ -39,11 +39,15 @@ html {
 }
 
 .proj-card {
-    transition: none;
+    transition: all 0.15s;
 }
 
 .proj-card:hover > a > img {
     filter: grayscale(0);
+}
+
+.proj-card:hover {
+    background-color: rgb(82 82 82);
 }
 
 .router-slide > div {

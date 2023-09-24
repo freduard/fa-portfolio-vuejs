@@ -1,6 +1,7 @@
 <script setup>
+import { onMounted } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Pagination, Navigation, Autoplay, Scrollbar } from 'swiper';
+import { Pagination, Autoplay, Scrollbar } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
@@ -9,10 +10,16 @@ import { projects } from '../projects.js'
 
 const modules = [
     Pagination,
-    Navigation,
     Autoplay,
     Scrollbar
 ]
+
+let mobile;
+
+if(window.innerWidth <= 768) {
+    mobile = true;
+}
+
 </script>
 
 <template>
@@ -35,17 +42,60 @@ const modules = [
             </h1>
         </div>
         <div class="flex items-center">
-            <swiper 
+            <swiper v-if="mobile"
+                class="w-full px-2 sm:px-4 py-4 sm:py-8"
+                :css-mode="true"
+                :modules="modules"
+                :scrollbar="{
+                    draggable: true
+                }"
+                :autoplay="{
+                    disableOnInteraction: true,
+                    delay: 2500
+                }"
+                :space-between="25"
+                :breakpoints="{
+                    '450': {
+                        slidesPerView: 2,
+                        spaceBetween: 10
+                    },
+                    '720': {
+                        slidesPerView: 3,
+                        spaceBetween: 15
+                    },
+                    '1024': {
+                        slidesPerView: 4,
+                        spaceBetween: 25
+                    },
+                    '1280': {
+                        slidesPerView: 5,
+                    }
+                }"
+                >
+                <swiper-slide v-for="(project, index) in projects" :key="index" class="gap-2 bg-neutral-700 rounded proj-card">
+                    <router-link :to="{ path: '/Project', query: { projectIndex: projects.findIndex(item => item.id === project.id) }}">
+                        <img :src="project.image" class="rounded-t h-64 sm:h-48 w-full grayscale duration-150" style="object-fit: cover;">
+                        <div class="p-2">
+                            <h1 class="text-rose-500 font-semibold truncate">{{project.title}}</h1>
+                            <p class="line-clamp-3">{{ project.p1 }}</p>
+                            <div class="flex justify-between text-neutral-300">
+                                <p class="truncate">{{project.date}}</p>
+                                <p class="text-indigo-200 truncate">{{project.lang}}</p>
+                            </div>
+                        </div>
+                    </router-link>
+                </swiper-slide>
+            </swiper>
+            <swiper v-if="!mobile"
                 class="w-full px-2 sm:px-4 py-4 sm:py-8"
                 :modules="modules"
                 :scrollbar="{
                     draggable: true
                 }"
                 :autoplay="{
-                    disableOnInteraction: false,
+                    disableOnInteraction: true,
                     delay: 2500
                 }"
-                :navigation="true"
                 :space-between="25"
                 :breakpoints="{
                     '450': {
