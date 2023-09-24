@@ -81,7 +81,7 @@ const props = defineProps({
                             <p>{{ project.date }}</p>
                         </div>
                     </div>
-                    <div class="h-full overflow-auto flex flex-col gap-2">
+                    <div class="h-max-[65vh] overflow-auto flex flex-col gap-2">
                         <p v-for="p in attrLength" :key="p" class="text-sm sm:text-base 2xl:text-lg">{{ project[`${p}`] }}</p>
                         <img :src="project.image" class="rounded-b duration-300 w-full" style="object-fit: cover;" alt="">
                     </div>
