@@ -48,7 +48,7 @@ const props = defineProps({
 
 <template>
 
-    <div class="h-full gap-4 px-2 flex items-center test">
+    <div class="h-full gap-4 px-2 flex items-center">
         <div v-on:click="slideNext" class="swiper-button-next md:px-10 lg:px-14 2xl:px-20 hidden sm:block"></div>    
         <div v-on:click="slidePrev" class="swiper-button-prev md:px-10 lg:px-14 2xl:px-20 hidden sm:block"></div>
         <swiper
@@ -81,7 +81,7 @@ const props = defineProps({
                             <p>{{ project.date }}</p>
                         </div>
                     </div>
-                    <div class="max-h-[65vh] overflow-auto flex flex-col gap-2">
+                    <div class="h-full overflow-auto flex flex-col gap-2">
                         <p v-for="p in attrLength" :key="p" class="text-sm sm:text-base 2xl:text-lg">{{ project[`${p}`] }}</p>
                         <img :src="project.image" class="rounded-b duration-300 w-full" style="object-fit: cover;" alt="">
                     </div>
