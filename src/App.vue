@@ -6,7 +6,6 @@ import 'swiper/css';
 import { ref, onMounted } from 'vue'
 import Header from './components/Header.vue';
 import Index from './views/Index.vue';
-import Projects from './views/Projects.vue';
 
 
 const modules = [
@@ -45,7 +44,8 @@ onMounted(() => {
     :hash-navigation="{
       watchState: true,
     }"
-    :slides-per-view="'auto'"  
+    :slides-per-view="'auto'"
+    :css-mode="true"
     :speed="400"  
     :direction="'vertical'"
     :mousewheel="true"
