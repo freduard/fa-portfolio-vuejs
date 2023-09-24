@@ -49,7 +49,7 @@ function onSwiper(){
             mousewheel
             @swiper="onSwiper"            
             >
-                <swiper-slide v-for="(project, index) in projects" :key="index" class="grid drop-shadow-md grid-cols-3 bg-zinc-600 rounded">
+                <swiper-slide v-for="(project, index) in projects" :key="index" class="grid grid-cols-3 bg-zinc-600 rounded">
                     <img :src="project.image" class="rounded-l grid-cols-1 w-full h-full" style="object-fit: cover;">
                     <div class="col-span-2 p-4">
                         <p class="text-2xl text-white font-bold h-full">{{ project.title }}</p>
