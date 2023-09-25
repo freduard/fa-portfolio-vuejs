@@ -47,7 +47,8 @@ const props = defineProps({
 </script>
 
 <template>
-
+    <img src="../assets/images/desktopbg.png" alt="bmw" id="bgImage" class="fixed h-screen w-screen -z-50 saturate-0 opacity-50 hidden md:block" style="object-fit: cover;">
+    <img src="../assets/images/mobilebg.png" alt="bmw" id="bgImage" class="fixed h-screen w-screen -z-50 saturate-0  md:hidden" style="object-fit: cover;">
     <div class="h-full gap-4 px-2 flex items-center">
         <div v-on:click="slideNext" class="swiper-button-next md:px-10 lg:px-14 2xl:px-20 hidden sm:block"></div>    
         <div v-on:click="slidePrev" class="swiper-button-prev md:px-10 lg:px-14 2xl:px-20 hidden sm:block"></div>
@@ -55,6 +56,7 @@ const props = defineProps({
             class="proje h-full"
             :modules="modules"
             :speed="400"
+            :loop="true"
         >
             <swiper-slide class="px-2 sm:px-12 md:px-24 lg:px-36 2xl:px-48 flex flex-col h-full sm:justify-center pt-16 sm:pt-0 font-['quicksand'] text-white" v-for="(project, index) in projects" :key="index">
                 <h1 class="text-xl sm:text-4xl lg:text-5xl font-bold font-['mrdafoe'] w-full mb-4 flex justify-between">
@@ -81,9 +83,11 @@ const props = defineProps({
                             <p>{{ project.date }}</p>
                         </div>
                     </div>
-                    <div class="h-max-[65vh] overflow-auto flex flex-col gap-2">
-                        <p v-for="p in attrLength" :key="p" class="text-sm sm:text-base 2xl:text-lg">{{ project[`${p}`] }}</p>
-                        <img :src="project.image" class="rounded-b duration-300 w-full" style="object-fit: cover;" alt="">
+                    <div class="max-h-[65vh] lg:max-h-max overflow-auto flex flex-col gap-2">
+                        <div class="flex flex-col justify-center gap-2">
+                            <p v-for="p in attrLength" :key="p" class="text-sm sm:text-base 2xl:text-xl">{{ project[`${p}`] }}</p>  
+                        </div>
+                        <img :src="project.image" class="rounded-b lg:rounded duration-300 w-full lg:h-[40vh] 2xl:h-[50vh]" style="object-fit: cover;" alt="">
                     </div>
                     <!-- <div v-on:click="dropDown('imageDropdown' + project.id)" class="bg-neutral-700 rounded hover:bg-neutral-600 text-white duration-300 2xl:hidden" :id="`imageDropdown` + project.id">
                         <div class="flex justify-between" id="imgTextDiv">
@@ -93,7 +97,7 @@ const props = defineProps({
                         <img :src="project.image" class="rounded-b duration-300 max-h-[0px] w-full h-full" style="object-fit: cover;" alt="">
                     </div> -->
                     
-                    <img :src="project.image" class="rounded w-full h-[35vh] hidden 2xl:block" style="object-fit: cover;" alt="">
+                    <!-- <img :src="project.image" class="rounded w-full h-[35vh] hidden 2xl:block" style="object-fit: cover;" alt=""> -->
                 </div>
             </swiper-slide>
         </swiper>
