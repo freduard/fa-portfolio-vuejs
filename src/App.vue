@@ -37,44 +37,45 @@ onMounted(() => {
 </script>
 
 <template>
-    <Header position="fixed" :current-section="currentSection" />
-    
-    <swiper 
-    class="h-screen w-screen"
-    :hash-navigation="{
-      watchState: true,
-    }"
-    :slides-per-view="'auto'"
-    :css-mode="true"
-    :speed="400"  
-    :direction="'vertical'"
-    :mousewheel="true"
-    :modules="modules"
-    :breakpoints="{
-      '640': {
-        allowTouchMove: false
-      }
-    }"
-    >
-      <swiper-slide data-hash="0" class="overflow-hidden min-h-screen">
-        <section id="0" class="bg-white w-full"></section>
-        <Index />
-      </swiper-slide>
-      <swiper-slide data-hash="1" class="router-slide min-h-screen">
-        <section id="1" class="bg-white top-0 w-full"></section>
-        <router-view v-slot="{ Component, route }">
-          <transition name="route" mode="out-in">
-            <div :key="route.fullPath">
-              <component :is="Component" />
-            </div>
-          </transition>
-        </router-view>
-      </swiper-slide>
-      <swiper-slide data-hash="2">
-        <section id="2" class="bg-white w-full"></section>
-        <h1>KONTAKT</h1>
-      </swiper-slide>
-    </swiper>
+  <img src="./assets/images/img-noise-1000x1000.png" alt="bmw" id="bgImage" class="fixed h-screen w-screen -z-50 brightness-125" style="object-fit: cover;">
+  <Header position="fixed" :current-section="currentSection" />
+  
+  <swiper 
+  class="h-screen w-screen"
+  :hash-navigation="{
+    watchState: true,
+  }"
+  :slides-per-view="'auto'"
+  :css-mode="true"
+  :speed="400"  
+  :direction="'vertical'"
+  :mousewheel="true"
+  :modules="modules"
+  :breakpoints="{
+    '640': {
+      allowTouchMove: false
+    }
+  }"
+  >
+    <swiper-slide data-hash="0" class="overflow-hidden min-h-screen">
+      <section id="0" class="bg-white w-full"></section>
+      <Index />
+    </swiper-slide>
+    <swiper-slide data-hash="1" class="router-slide min-h-screen">
+      <section id="1" class="bg-white top-0 w-full"></section>
+      <router-view v-slot="{ Component, route }">
+        <transition name="route" mode="out-in">
+          <div :key="route.fullPath">
+            <component :is="Component" />
+          </div>
+        </transition>
+      </router-view>
+    </swiper-slide>
+    <swiper-slide data-hash="2">
+      <section id="2" class="bg-white w-full"></section>
+      <h1>KONTAKT</h1>
+    </swiper-slide>
+  </swiper>
 </template>
 
 <style scoped>

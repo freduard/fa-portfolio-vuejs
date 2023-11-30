@@ -15,9 +15,10 @@ function slideTo(index) {
 }
 
 const headers = [
-    'KODU',
-    'PROJETKID',
-    'KONTAKT'
+    'Kodu',
+    'Projektid',
+    'Teenused',
+    'Minust'
 ]
 
 onMounted(() => {
@@ -32,14 +33,15 @@ onMounted(() => {
 </script>
 
 <template>
-    <header class="h-12 z-50 text-white items-center fixed w-full flex justify-between px-2 sm:px-12 md:px-24 lg:px-36 2xl:px-48 font-['quicksand'] font-semibold">
+    <header class="h-12 z-50 text-white items-center fixed w-full flex justify-between lg:justify-around font-['quicksand'] font-semibold">
         <button class="h-full" v-on:click="slideTo(0)"><img src="../assets/logos/fa_logo.svg" class="h-full p-2" alt=""></button>
-        <div class="sm:flex h-full hidden">
-            <button v-for="(header, index) in headers" :key="header" v-on:click="slideTo(index)" :class="[{ active: index == currentSection }, `h-full hover:bg-white text-sm lg:text-base hover:text-black hover:drop-shadow-md duration-150 flex items-center px-4`]">
+        <div class="lg:flex h-full hidden justify-between w-96">
+            <button v-for="(header, index) in headers" :key="header" v-on:click="slideTo(index)" :class="[{ active: index == currentSection }, `h-full hover:bg-white text-sm lg:text-base hover:text-black font-bold hover:drop-shadow-md duration-150 flex items-center px-4`]">
                 {{ header }}
             </button>
+            
         </div>
-        <div class="sm:hidden flex h-full">
+        <div class="lg:hidden flex h-full">
             <button v-for="(header, index) in headers" :key="header" v-on:click="slideTo(index)" :class="[{ active: index == currentSection }, `h-full text-sm lg:text-base hover:drop-shadow-md duration-150 flex items-center`]">
                 <HomeIcon class="h-full p-2" v-if="index == 0"/>
                 <CodeIcon class="h-full p-2" v-if="index == 1" />
@@ -51,6 +53,6 @@ onMounted(() => {
 
 <style scoped>
 .active {
-    color: rgb(244 63 94);
+    color: #E3292C;
 }
 </style>
