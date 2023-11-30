@@ -6,6 +6,7 @@ import 'swiper/css';
 import { ref, onMounted } from 'vue'
 import Header from './components/Header.vue';
 import Index from './views/Index.vue';
+import Services from './views/Services.vue';
 
 
 const modules = [
@@ -73,7 +74,7 @@ onMounted(() => {
     </swiper-slide>
     <swiper-slide data-hash="2">
       <section id="2" class="bg-white w-full"></section>
-      <h1>KONTAKT</h1>
+      <Services />
     </swiper-slide>
   </swiper>
 </template>

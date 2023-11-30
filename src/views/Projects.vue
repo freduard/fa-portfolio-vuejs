@@ -26,9 +26,9 @@ if(window.innerWidth <= 768) {
 
 <template>
     <div class="flex flex-col justify-center h-full w-full font-['quicksand'] text-white overflow-hidden">
-        <div class="hidden md:block absolute w-full h-1/2 scale-[2] mt-[600px] bg-gradient-to-t from-stone-800 to-neutral-900" style="border-radius: 50%;"></div>
+        <div class="absolute scale-150 w-full h-96 bottom-24  bg-gradient-to-t from-stone-800 to-neutral-900" style="border-top-right-radius: 50%; border-top-left-radius: 50%;"></div>
         <div class="px-2 sm:px-12 md:px-24 lg:px-36 2xl:px-48">
-            <h1 class="text-6xl sm:text-7xl lg:text-8xl 2xl:text-9xl font-bold  text-white font-['mrdafoe']">
+            <h1 class="text-5xl sm:text-7xl lg:text-8xl 2xl:text-9xl font-bold  text-white font-['mrdafoe']">
                 Projects
             </h1>
         </div>
@@ -96,7 +96,7 @@ if(window.innerWidth <= 768) {
                 >
                 <swiper-slide v-for="(project, index) in projects" :key="index" class="font-['mrdafoe'] rounded border-2 border-neutral-800 bg-neutral-900 drop-shadow-cust">
                     <router-link :to="{ path: '/Project', query: { projectIndex: projects.findIndex(item => item.id === project.id) }}" class="hover:brightness-125 duration-150">
-                        <img :src="project.image" class=" h-72 rounded-t brightness-75 w-full" style="object-fit: cover;">
+                        <img :src="project.image" class=" h-64 rounded-t brightness-75 w-full" style="object-fit: cover;">
                         <div class="p-4">
                             <h1 class="text-white text-xl font-bold line-clamp-1 mb-2">{{project.title}}</h1>
                             <p class="line-clamp-3 text-sm">{{ project['p1'] }}</p>

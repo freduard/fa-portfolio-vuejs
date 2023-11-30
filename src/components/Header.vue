@@ -15,10 +15,10 @@ function slideTo(index) {
 }
 
 const headers = [
-    'Kodu',
-    'Projektid',
-    'Teenused',
-    'Minust'
+    'Home',
+    'Projects',
+    'Services',
+    'About'
 ]
 
 onMounted(() => {
@@ -33,8 +33,8 @@ onMounted(() => {
 </script>
 
 <template>
-    <header class="h-12 md:px-14 z-50 text-white items-center fixed w-full flex justify-between lg:justify-around font-['quicksand'] font-semibold">
-        <button class="h-full" v-on:click="slideTo(0)"><img src="../assets/logos/fa_logo.svg" class="h-full p-2 max-h-12 sm:px-12" alt=""></button>
+    <header class="h-12 xl:h-24 md:px-14 lg:px-0 z-50 text-white items-center fixed w-full flex justify-between lg:justify-around font-['quicksand'] font-semibold">
+        <button class="h-full" v-on:click="slideTo(0)"><img src="../assets/logos/fa_logo.svg" class="h-full p-2 max-h-12 sm:px-12 lg:px-0" alt=""></button>
         <div class="lg:flex h-full max-h-12 hidden justify-between w-96">
             <button v-for="(header, index) in headers" :key="header" v-on:click="slideTo(index)" :class="[{ active: index == currentSection }, `h-full hover:bg-white text-sm lg:text-base hover:text-black font-bold hover:drop-shadow-md duration-150 flex items-center px-4`]">
                 {{ header }}

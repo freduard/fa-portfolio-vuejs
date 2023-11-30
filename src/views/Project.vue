@@ -59,7 +59,7 @@ const props = defineProps({
             :loop="true"
             :initial-slide="Number(projectIndex)"
         >
-            <swiper-slide class="px-2 sm:px-12 md:px-24 lg:px-36 2xl:px-48 flex flex-col h-full sm:justify-center pt-16 sm:pt-0 font-['quicksand'] text-white" v-for="(project, index) in projects" :key="index">
+            <swiper-slide class="px-2 sm:px-12 md:px-24 lg:px-44 xl:64 2xl:px-96 flex flex-col h-full sm:justify-center pt-16 sm:pt-0 font-['quicksand'] text-white" v-for="(project, index) in projects" :key="index">
                 <h1 class="text-xl sm:text-4xl lg:text-5xl font-bold font-['mrdafoe'] w-full mb-4 flex justify-between">
                     {{ titleToUpper(project.title) }}
                     <router-link to="/" class="h-full font-['quicksand'] hover:bg-white text-sm lg:text-base hover:text-black hover:drop-shadow-md duration-150 flex items-center px-4">
@@ -83,12 +83,17 @@ const props = defineProps({
                             <p>{{ project.date }}</p>
                             <p class="text-[#E3292C] hidden sm:block">{{project.lang}}</p>
                         </div>
-                    </div>
+                    </div>                    
                     <div class="max-h-[65vh] lg:max-h-max overflow-auto flex flex-col gap-2">
                         <div class="flex flex-col justify-center gap-2">
                             <p v-for="p in attrLength" :key="p" class="text-sm sm:text-base 2xl:text-xl">{{ project[`${p}`] }}</p>  
                         </div>
-                        <img :src="project.image" class="rounded-b lg:rounded duration-300 w-full lg:h-[40vh] 2xl:h-[50vh]" style="object-fit: cover;" alt="">
+                    </div>
+                    <div class="grid grid-cols-3 md:grid-cols-4 2xl:grid-cols-5 gap-2">
+                        <img :src="project.image" class="rounded w-full" style="object-fit: cover;" alt="">
+                        <img :src="project.image" class="rounded w-full" style="object-fit: cover;" alt="">
+                        <img :src="project.image" class="rounded w-full" style="object-fit: cover;" alt="">
+                        <img :src="project.image" class="rounded w-full" style="object-fit: cover;" alt="">
                     </div>
                     <!-- <div v-on:click="dropDown('imageDropdown' + project.id)" class="bg-neutral-700 rounded hover:bg-neutral-600 text-white duration-300 2xl:hidden" :id="`imageDropdown` + project.id">
                         <div class="flex justify-between" id="imgTextDiv">
