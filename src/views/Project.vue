@@ -47,9 +47,9 @@ const props = defineProps({
 </script>
 
 <template>
-    <img src="../assets/images/desktopbg.png" alt="bmw" id="bgImage" class="fixed h-screen w-screen -z-50 saturate-0 opacity-50 hidden md:block" style="object-fit: cover;">
-    <img src="../assets/images/mobilebg.png" alt="bmw" id="bgImage" class="fixed h-screen w-screen -z-50 saturate-0  md:hidden" style="object-fit: cover;">
-    <div class="h-full gap-4 px-2 flex items-center">
+    <img src="../assets/images/desktopbg.png" alt="bmw" id="bgImage" class="fixed h-screen w-screen saturate-0 opacity-50 hidden md:block" style="object-fit: cover;">
+    <img src="../assets/images/mobilebg.png" alt="bmw" id="bgImage" class="fixed h-screen w-screen saturate-0  md:hidden" style="object-fit: cover;">
+    <div class="h-full gap-4 px-2 flex items-center bg-stone-900">
         <div v-on:click="slideNext" class="swiper-button-next md:px-10 lg:px-14 2xl:px-20 hidden sm:block"></div>    
         <div v-on:click="slidePrev" class="swiper-button-prev md:px-10 lg:px-14 2xl:px-20 hidden sm:block"></div>
         <swiper
@@ -57,6 +57,7 @@ const props = defineProps({
             :modules="modules"
             :speed="400"
             :loop="true"
+            :initial-slide="Number(projectIndex)"
         >
             <swiper-slide class="px-2 sm:px-12 md:px-24 lg:px-36 2xl:px-48 flex flex-col h-full sm:justify-center pt-16 sm:pt-0 font-['quicksand'] text-white" v-for="(project, index) in projects" :key="index">
                 <h1 class="text-xl sm:text-4xl lg:text-5xl font-bold font-['mrdafoe'] w-full mb-4 flex justify-between">
@@ -71,16 +72,16 @@ const props = defineProps({
                 <div class="flex flex-col gap-2 text-justify">
                     <div class="flex text-sm lg:text-base font-bold font-['quicksand'] justify-between">
                         <div class="flex gap-3">
-                            <a :href="project.github" v-if="project.github" target="_blank" class="hover:text-rose-500 duration-150">GITHUB</a>
+                            <a :href="project.github" v-if="project.github" target="_blank" class="hover:text-[#E3292C] duration-150">GITHUB</a>
                             <p class="text-neutral-500 cursor-default select-none" v-else>GITHUB</p>
-                            <a :href="project.figma" v-if="project.figma" target="_blank" class="hover:text-rose-500 duration-150">FIGMA</a>
+                            <a :href="project.figma" v-if="project.figma" target="_blank" class="hover:text-[#E3292C] duration-150">FIGMA</a>
                             <p class="text-neutral-500 cursor-default select-none" v-else>FIGMA</p>
-                            <a :href="project.online" v-if="project.online" target="_blank" class="hover:text-rose-500 duration-150">ONLINE</a>
+                            <a :href="project.online" v-if="project.online" target="_blank" class="hover:text-[#E3292C] duration-150">ONLINE</a>
                             <p class="text-neutral-500 cursor-default select-none" v-else>ONLINE</p>
                         </div>
-                        <div class="flex gap-1">
-                            <h1 class="text-rose-500">KUUPÄEV</h1>
+                        <div class="flex gap-4">
                             <p>{{ project.date }}</p>
+                            <p class="text-[#E3292C] hidden sm:block">{{project.lang}}</p>
                         </div>
                     </div>
                     <div class="max-h-[65vh] lg:max-h-max overflow-auto flex flex-col gap-2">

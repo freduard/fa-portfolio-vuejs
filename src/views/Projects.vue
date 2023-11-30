@@ -1,8 +1,7 @@
 <script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Pagination, Autoplay, Scrollbar, EffectCoverflow, EffectFlip } from 'swiper';
+import { Pagination, Autoplay, Scrollbar, EffectCoverflow, Navigation } from 'swiper';
 import 'swiper/css/effect-coverflow';
-import 'swiper/css/effect-flip';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
@@ -14,7 +13,7 @@ const modules = [
     Autoplay,
     Scrollbar,
     EffectCoverflow,
-    EffectFlip
+    Navigation
 ]
 
 let mobile;
@@ -26,11 +25,10 @@ if(window.innerWidth <= 768) {
 </script>
 
 <template>
-    <img src="../assets/images/desktopbg.png" alt="bmw" id="bgImage" class="fixed h-screen w-screen -z-50 saturate-0 opacity-50 hidden md:block" style="object-fit: cover;">
-    <img src="../assets/images/mobilebg.png" alt="bmw" id="bgImage" class="fixed h-screen w-screen -z-50 saturate-0  md:hidden" style="object-fit: cover;">
-    <div class="flex flex-col justify-center h-full w-full font-['quicksand'] text-white">
+    <div class="flex flex-col justify-center h-full w-full font-['quicksand'] text-white overflow-hidden">
+        <div class="hidden md:block absolute w-full h-1/2 scale-[2] mt-[600px] bg-gradient-to-t from-stone-800 to-neutral-900" style="border-radius: 50%;"></div>
         <div class="px-2 sm:px-12 md:px-24 lg:px-36 2xl:px-48">
-            <h1 class="text-5xl sm:text-6xl lg:text-8xl 2xl:text-9xl font-bold  text-white font-['mrdafoe']">
+            <h1 class="text-6xl sm:text-7xl lg:text-8xl 2xl:text-9xl font-bold  text-white font-['mrdafoe']">
                 Projects
             </h1>
         </div>
@@ -39,9 +37,7 @@ if(window.innerWidth <= 768) {
                 class="w-full px-2 sm:px-4 py-4 sm:py-8"
                 :modules="modules"
                 :effect="'coverflow'"
-                :scrollbar="{
-                    draggable: true
-                }"
+                :navigation="true"
                 :loop="true"
                 :autoplay="{
                     disableOnInteraction: true,
@@ -64,7 +60,7 @@ if(window.innerWidth <= 768) {
                     }
                 }"
                 >
-                <swiper-slide v-for="(project, index) in projects" :key="index" class="font-['mrdafoe'] rounded border-2 border-neutral-800 bg-neutral-900">
+                <swiper-slide v-for="(project, index) in projects" :key="index" class="font-['mrdafoe'] rounded border-2 border-neutral-700 bg-neutral-900 drop-shadow-lg">
                     <router-link :to="{ path: '/Project', query: { projectIndex: projects.findIndex(item => item.id === project.id) }}" class="hover:brightness-125 duration-150">
                         <img :src="project.image" class=" h-72 rounded-t brightness-75 w-full" style="object-fit: cover;">
                         <div class="p-4">
@@ -73,13 +69,13 @@ if(window.innerWidth <= 768) {
                         </div>
                         <div class="flex justify-between p-4 font-['quicksand'] font-medium">
                             <p class="text-neutral-300">{{project.date}}</p>
-                            <p class="text-blue-300">{{project.lang}}</p>
+                            <p class="text-[#E3292C]">{{project.lang}}</p>
                         </div>
                     </router-link>
                 </swiper-slide>
             </swiper>
             <swiper v-if="mobile"
-                class="w-full px-2 sm:px-4 py-4 sm:py-8"
+                class="w-full px-2 sm:px-12 py-4 sm:py-8"
                 :modules="modules"
                 :cssMode="true"
                 :scrollbar="{
@@ -98,7 +94,7 @@ if(window.innerWidth <= 768) {
                 }"
                 :spaceBetween="25"
                 >
-                <swiper-slide v-for="(project, index) in projects" :key="index" class="font-['mrdafoe'] rounded border-2 border-neutral-800 bg-neutral-900">
+                <swiper-slide v-for="(project, index) in projects" :key="index" class="font-['mrdafoe'] rounded border-2 border-neutral-800 bg-neutral-900 drop-shadow-cust">
                     <router-link :to="{ path: '/Project', query: { projectIndex: projects.findIndex(item => item.id === project.id) }}" class="hover:brightness-125 duration-150">
                         <img :src="project.image" class=" h-72 rounded-t brightness-75 w-full" style="object-fit: cover;">
                         <div class="p-4">
@@ -107,7 +103,7 @@ if(window.innerWidth <= 768) {
                         </div>
                         <div class="flex justify-between p-4 font-['quicksand'] text-sm font-medium">
                             <p class="text-neutral-300">{{project.date}}</p>
-                            <p class="text-blue-300">{{project.lang}}</p>
+                            <p class="text-[#E3292C]">{{project.lang}}</p>
                         </div>
                     </router-link>
                 </swiper-slide>

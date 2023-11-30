@@ -29,7 +29,7 @@ html {
 }
 
 .swiper-button-next:hover, .swiper-button-prev:hover {
-    color: rgb(244 63 94);
+    color: #E3292C;
     opacity: 1;
     filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
 }
@@ -52,5 +52,9 @@ html {
 
 .router-slide > div {
     height: 100%;
+}
+
+.drop-shadow-cust {
+    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
 }
 
