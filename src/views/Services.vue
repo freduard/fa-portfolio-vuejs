@@ -8,7 +8,7 @@ import { services } from '../services'
             <h1 class="text-6xl sm:text-7xl lg:text-8xl 2xl:text-9xl font-bold py-16 lg:py-28 xl:py-32 font-['mrdafoe']">
                 Services
             </h1>
-            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 max-h-[750px] overflow-auto py-24 pb-44 lg:pb-0 sm:py-32 lg:py-24 xl:py-24 gap-6 lg:gap-12 font-['quicksand'] px-4">
+            <div class="sm:px-14 md:px-20 lg:px-28 xl:px-36 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 max-h-[80vh] overflow-auto py-24 bottom-0 lg:bottom-auto w-full left-0 absolute lg:pb-0 sm:py-32 lg:py-24 xl:py-24 gap-6 lg:gap-12 font-['quicksand'] px-4">
                 <div v-for="(service, index) in services" :key="index" class="bg-zinc-900 rounded-xl border border-neutral-800 drop-shadow-cust p-6 -z-20 lg:z-0 hover:brightness-110 hover:scale-105 duration-150 gap-2 flex flex-col">
                     <div>
                         <h1 class="text-base md:text-xl font-bold">{{ service.title }}</h1>

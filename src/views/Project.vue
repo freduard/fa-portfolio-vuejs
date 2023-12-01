@@ -69,7 +69,7 @@ const props = defineProps({
                     </router-link>
                 </h1>
                 
-                <div class="flex flex-col gap-2 text-justify">
+                <div class="flex flex-col gap-2 text-justify max-h-[60vh] overflow-auto">
                     <div class="flex text-sm lg:text-base font-bold font-['quicksand'] justify-between">
                         <div class="flex gap-3">
                             <a :href="project.github" v-if="project.github" target="_blank" class="hover:text-[#E3292C] duration-150">GITHUB</a>
@@ -88,12 +88,12 @@ const props = defineProps({
                         <div class="flex flex-col justify-center gap-2">
                             <p v-for="p in attrLength" :key="p" class="text-sm sm:text-base 2xl:text-xl">{{ project[`${p}`] }}</p>  
                         </div>
-                    </div>
-                    <div class="grid grid-cols-3 md:grid-cols-4 2xl:grid-cols-5 gap-2">
-                        <img :src="project.image" class="rounded w-full" style="object-fit: cover;" alt="">
-                        <img :src="project.image" class="rounded w-full" style="object-fit: cover;" alt="">
-                        <img :src="project.image" class="rounded w-full" style="object-fit: cover;" alt="">
-                        <img :src="project.image" class="rounded w-full" style="object-fit: cover;" alt="">
+                        <div class="grid grid-cols-3 md:grid-cols-4 2xl:grid-cols-5 gap-2">
+                            <img :src="project.image" class="rounded w-full" style="object-fit: cover;" alt="">
+                            <img :src="project.image" class="rounded w-full" style="object-fit: cover;" alt="">
+                            <img :src="project.image" class="rounded w-full" style="object-fit: cover;" alt="">
+                            <img :src="project.image" class="rounded w-full" style="object-fit: cover;" alt="">
+                        </div>
                     </div>
                     <!-- <div v-on:click="dropDown('imageDropdown' + project.id)" class="bg-neutral-700 rounded hover:bg-neutral-600 text-white duration-300 2xl:hidden" :id="`imageDropdown` + project.id">
                         <div class="flex justify-between" id="imgTextDiv">
