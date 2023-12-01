@@ -13,6 +13,12 @@
     src: url('./assets/fonts/phil.ttf');
 }
 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 html {
     scroll-behavior: smooth;
     background-color: #1D1915;
