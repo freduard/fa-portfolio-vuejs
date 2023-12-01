@@ -34,60 +34,17 @@ onMounted(() => {
     observer.observe(section)
   })
 })
-
-let mobile;
-
-if(window.innerWidth <= 768) {
-    mobile = true;
-}
 </script>
 
 <template>
   <article class="wrapper"></article>
   <Header position="fixed" :current-section="currentSection" />
   
-  <swiper v-if="!mobile"
+  <swiper
   class="h-screen w-screen"
   :hash-navigation="{
     watchState: true,
   }"
-  :slides-per-view="'auto'"
-  :speed="400"  
-  :direction="'vertical'"
-  :mousewheel="true"
-  :modules="modules"
-  :breakpoints="{
-    '640': {
-      allowTouchMove: false
-    }
-  }"
-  >
-    <swiper-slide data-hash="0" class="overflow-hidden w-screen min-h-screen">
-      <section id="0" class="bg-white w-full"></section>
-      <Index />
-    </swiper-slide>
-    <swiper-slide data-hash="1" class="router-slide min-h-screen w-screen overflow-hidden z-50">
-      <section id="1" class="bg-white top-0 w-full"></section>
-      <router-view v-slot="{ Component, route }">
-        <transition name="route" mode="out-in">
-          <div :key="route.fullPath">
-            <component :is="Component" />
-          </div>
-        </transition>
-      </router-view>
-    </swiper-slide>
-    <swiper-slide data-hash="2">
-      <section id="2" class="bg-white w-full"></section>
-      <Services />
-    </swiper-slide>
-  </swiper>
-
-  <swiper v-if="mobile"
-  class="h-screen w-screen"
-  :hash-navigation="{
-    watchState: true,
-  }"
-  :css-mode="true"
   :slides-per-view="'auto'"
   :speed="400"  
   :direction="'vertical'"
