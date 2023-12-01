@@ -45,6 +45,7 @@ onMounted(() => {
   :hash-navigation="{
     watchState: true,
   }"
+  :css-mode="true"
   :slides-per-view="'auto'"
   :speed="400"  
   :direction="'vertical'"
