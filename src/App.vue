@@ -52,9 +52,9 @@ onMounted(() => {
         <a href="mailto:aitfredy@gmail.com" class="hover:text-[#E3292C] duration-150" style="transform: rotate(-90deg);">aitfredy@gmail.com</a>
     </div>
     <div class="hidden sm:flex font-['mrdafoe'] items-center flex-col justify-center w-20 gap-4 h-full fixed right-0 z-[1000]">
-        <a href="" class="social flex items-center justify-center"><unicon class="svg h-6 w-6" fill="white" hover-fill="#E3292C" name="instagram"  /></a>
+        <!-- <a href="" class="social flex items-center justify-center"><unicon class="svg h-6 w-6" fill="white" hover-fill="#E3292C" name="instagram"  /></a>
         <a href="" class="social flex items-center justify-center"><unicon class="svg h-6 w-6" fill="white" hover-fill="#E3292C" name="github-alt" /></a>
-        <a href="" class="social flex items-center justify-center"><unicon class="svg h-6 w-6" fill="white" hover-fill="#E3292C" name="linkedin-alt" /></a>
+        <a href="" class="social flex items-center justify-center"><unicon class="svg h-6 w-6" fill="white" hover-fill="#E3292C" name="linkedin-alt" /></a> -->
     </div>
 
     <section id="index"><Index /></section>

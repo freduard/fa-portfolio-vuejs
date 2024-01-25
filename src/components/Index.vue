@@ -18,9 +18,9 @@
             </div>
             <div class="flex flex-col items-center max-w-48 sm:hidden">
                 <div class="flex w-full justify-between p-1 border-b border-neutral-500">
-                    <a href=""><unicon name="instagram" fill="white" class="h-6 w-6" /></a>
+                    <!-- <a href=""><unicon name="instagram" fill="white" class="h-6 w-6" /></a>
                     <a href=""><unicon name="github-alt" fill="white" class="h-6 w-6" /></a>
-                    <a href=""><unicon name="linkedin-alt" fill="white" class="h-6 w-6" /></a>
+                    <a href=""><unicon name="linkedin-alt" fill="white" class="h-6 w-6" /></a> -->
                 </div>
                 <a href="" class="p-1 font-['mrdafoe'] text-sm">aitfredy@gmail.com</a>
             </div>
