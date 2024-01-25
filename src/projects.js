@@ -1,115 +1,103 @@
-const getImg = (name) => {
-    const path = `/src/assets/images/${name}`; //your imgfile
-    const modules = import.meta.globEager("/src/assets/images/*"); 
-    return modules[path].default;
-}
+// function getImg(name) {
+//     return(`/src/assets/images/${name}`);
+// }
 
 export const projects = [
     {
         id: 1,
         // date: "Oktoober 4, 2021",
-        date: "Oktoober 2021",
+        date: "04/10/21",
         title: "Collatz Conjecture",
-        image: getImg("collatz.jpg"),
+        // image: getImg("collatz.jpg"),
         lang: "Python",
         github: "https://github.com/freduard/collatz_conjecture",
         figma: "",
         online: "",
-        p1: "Tegin selle skripti, et oma oskuseid Pythonis harjutada. Nägin videot selle matemaatilise probleemi kohta, millejärel tuli mõte seda teha. 'Collatz Conjecture' jaoks tuleb võtta mingi number. Kui see on paarisarv, siis tuleb see jagada kahega või korrutada kolmega ja lisada selle 1 kui see ei ole paarisarv. See skript kalkuleerib läbi kõik numbrid lõpmatuseni ja salvestab selle numbri mille peal sai teha kõige rohkem kalkulatsioone, ehk siis jagamist või korrutamist.",
-        p2: "Lisasin ka salvestamis feature'i mis laseb sul samast kohast edasi kalkuleerida kui skript kinni panna."
+        p1: "I saw a video about a math problem called 'Collatz Conjecture', after which I wanted to test my skills in math & Python. For this problem, you need to take a number. If it's even, you must divide it by 2. If it's odd, you multiply it by 3 and add 1. This script script will calculate numbers from 1 to infinity and save the number which you could do the most calculations on. I also added a feature which saves the last number you calculated so next time you run it, you can continue where you left off."
     },
     {
         id: 2,
         // date: "November 5, 2021",
-        date: "November 2021",
-        title: "Ryan Reynolds E-Portfoolio",
-        image: getImg("ryan_reynolds.jpg"),
+        date: "05/11/21",
+        title: "Ryan .R Portfolio",
+        // image: getImg("ryan_reynolds.jpg"),
         lang: "HTML + CSS",
         github: "https://tak19leemet.itmajakas.ee/team3-portfolio/",
         figma: "https://www.figma.com/file/NeiL7NSUinwE0dAxOEQsNG/Desktop",
         online: "https://tak19leemet.itmajakas.ee/team3-portfolio/",
-        p1: "Esimese projektina oli vaja 3 päeva jooksul oma meeskonnaga valmis teha E-Portfolio kas reaalse inimese või väljamõeldud tegelase kohta. Projekti lõpptulemus tuli üldjoontes üpris hästi välja. Vahetevahel oli abi vaja CSS'i osas, kuna ma ei saanud siis elementide paigutamisest ja õige koodi struktuuri kirjutamisest nii hästi veel aru, sest olin selle teema õppimisega alles alustanud.",
-        p2: "Tagasi vaadates oleksin võinud lehekülje HTML struktuuri juba algselt paremini kodeerida ja organiseerida, kuna lõpuks oli kõik üpris segane ja oli raske koodist aru saada. Arvestades sellega, et see oli mu päris esimene kord kui ma üldse veebilehte arendasin, olen tulemusega rahul."
+        p1: "For my first school project I had to make a portfolio for a character, real or fake in 3 days. Considering it was my first ever project, the outcome was decent although I needed some help with CSS. Looking back the code structure and organization was horrendus, which made reading it difficult."
     },
     {
         id: 3,
         // date: "Detsember 15, 2021",
-        date: "Detsember 2021",
-        title: "Virtuaalne Instrument",
-        image: getImg("arduino_chello.jpg"),
+        date: "15/12/21",
+        title: "Virtual Instrument",
+        // image: getImg("arduino_chello.jpg"),
         lang: "JS + HTML + CSS",
         github: "https://github.com/freduard/tiim-5",
         figma: "https://www.figma.com/file/MS84o0iRUgXWLZkr4FUfv8/Tiim5?node-id=0%3A1",
         online: "",
-        p1: "Teise projektina pidime tegema virtuaalse muusikainstrumendi, milleks kasutasime Arduinot, veebisaiti ja serverit. Selleks ühendasime Arduino veebisaidiga ja seda serveri abil, kogu töö hõlmas endas ka programmeerimis Javas, JavaScriptis ja Phythonis, mille tulemusena sai virtuaalselt tšellot mängida. Ühendamine toimus serveriga, mis jooksis teise arvuti peal.",
-        p2: "Noote sai mängida nii veebisaidi kui ka Arduino peal. Veebisaidil oli ka juba enamjaolt ette tehtud kood, mis visualiseeris hääli JavaScriptiga. Mina tegelesin peamiselt JavaScriptiga ja Githubiga, et need noodid töötaksid. Kahjuks ei tulnud asi välja nii nagu oodatud. Hääl hakkis ja kogu süsteem jooksis väga aeglaselt.",
-        p3: "Samuti oli probleeme meeskonnaga, kuna puudus juht, kes kogu tööd oleks suunanud ja koordineerinud. Lisaks mõned meeskonnaliikmed lahkusid poole töö pealt, mis tegi vajaliku tulemuse saavutamise väga raskeks. Kokkuvõttes andis see kõik juurde vajalikku praktilist kogemust meeskonnatöö osas.",
+        p1: "For my second school project we had to make a virtual instrument you could play online. We used an arduino with some buttons to play notes and broadcast it live to a server and website. I mainly dealed with github & JavaScript. Unfortunately it was a failure as team communication & coordination was poor. Something went wrong with the code resulting in the sound lagging and everything running slow. Taught me how important the team aspect is of any project."
     },
     {
         id: 4,
         // date: "Märts 4, 2022",
-        date: "Märts 2022",
-        title: "Andmemudeid & planeerimine",
-        image: getImg("datamodels_project_planning.webp"),
+        date: "04/03/22",
+        title: "Datamodels & Planning",
+        // image: getImg("datamodels_project_planning.jpg"),
         lang: "None",
         github: "https://github.com/angsuuu/Project-5---Team-8",
         figma: "",
         online: "",
-        p1: "Basically suht timm blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla",
-        p2: "rohkem ei oska öelda",
+        p1: "For the third school project, we had to think of an idea and document each step of the way in great detail. Our idea was a warehouse management system. We documented each step of the process, how we would do it, what technoligies we would use, and so on. I didn't like this very much, as the planning part of any project is a pain for me.",
     },
     {
         id: 5,
         // date: "Märts 25, 2022",
-        date: "Märts 2022",
-        title: "Andres Kõljalg E-Portfoolio",
-        image: getImg("andres_koljalg_portfolio.png"),
+        date: "25/03/22",
+        title: "Andres .K Portfolio",
+        // image: getImg("andres_koljalg_portfolio.png"),
         lang: "VueJS + Tailwind",
         github: "https://github.com/andreskoljalg/andres-koljalg-portfolio",
         figma: "",
-        online: "https://andres-koljalg-portfolio.pages.dev/",
-        p1: "Sain Andresega läbi oma venna tuttavaks, kui ta oli maininud e-portfoolio vajadust. See oli minu esimene päris projekt ja veebiarenduse tööots mida ma sel ajal teinud olin. Selle projekti arendamise käigus sain ma arvan ühe kooli aasta võrra teadmisi juurde veebiarendamises. Alguses mõtlesin, et see on lihtne ja kiire paarinädala töö mis on osutus täiesti vastupidiseks.",
-        p2: "Algselt ainukene asi mida ma kasutasin oli TailwindCSS ilma ühegi raamistikuta, mis oli suur viga elementide paigutuse tõttu, kuna elementide klasside read tulid väga massiivsed mistõttu oli ka koodist lõpuks raske aru saada. Peale selle kui ma veel copy-past-isin elemente kuskilt mujalt koodist, siis läheb kõik väga segaseks. On olemas erinevad raamistikud nagu Vue.js mis lahendavad selle probleemi, mida ma muidugi naiivselt ei kasutanud.",
-        p3: "Paratamatult pidin ma terve projekti port'ima Vue.js raamistiku peale ja ümber ehitama terve saidi back-end'i süsteemi mis oli pehmelt öeldes piinarikas. Vähemalt nüüd tean, et raamistik on alati vajalik, ükskõik kui suur või väike su projekt tundub.",
+        online: "https://tak21fredyait.itmajakas.ee/andres/",
+        p1: "I got acquainted with Andres through my brother as he was in need for a personal portfolio. This was my very first real web development project at the time. It seemed like an easy little job at first but proved to be much more complicated and bigger than I initially thought. I never used a framework like Vue, which was a huge mistake. Eventually I did deliver a HTML & CSS page which a lot of horrendus PHP logic sprinkled in between to make it easier to add new projects and make it at least somewhat automated/dynamic."
     },
     {
         id: 6,
         // date: "Aprill 6, 2022",
-        date: "Aprill 2022",
-        title: "Muusika poe veebileht",
-        image: getImg("music_instrument_store.png"),
+        date: "06/04/22",
+        title: "Music Shop Page",
+        // image: getImg("music_instrument_store.png"),
         lang: "VueJS + Tailwind",
         github: "https://github.com/TimTimDev/timo-lopuproje",
         figma: "",
         online: "",
-        p1: "Basically suht timm blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla blah bla",
-        p2: "rohkem ei oska öelda",
+        p1: "This was another school project where we made a music shop page for a third year student's final school project. Nothing special.",
     },
     {
         id: 7,
         // date: "Mai 18, 2022",
-        date: "Mai 2022",
+        date: "18/05/22",
         title: "Python Image Downscaler",
-        image: getImg("python.jpg"),
+        // image: getImg("python.jpg"),
         lang: "Python",
         github: "https://github.com/freduard/python-image-downscaler",
         figma: "",
         online: "",
-        p1: "Tegin selle skripti yhe oma kliendi jaoks kellel oli vaja suures mahus pilte töötelda. See skript skalleerib kõikide piltide resolutsiooni antud protsendi võrra vähemaks ühe folderi sees. Seejärel teeb folderile koopia ja asetab kõik töödeldud pildid sinna sisse.",
-        p2: "See osutus palju keerulisemaks kui algselt arvasin, kuna kogu aeg tuli aina rohkem ja rohkem asju juurde millega pidin arvestama. Nagu näiteks mitme operatsioonisüsteemi toetus. Poole peal leidsin ka koodis suure loogika vea misjärel pidin enamus skripti ümber kirjutama palju keerulisema loogikaga."
+        p1: "When Andres needed a way to downscale images as his raw images for his portfolio were way too big in size, I made a pretty sophisticated python script which wasn't exactly an elegeant solution to his problem. Basically, it finds all possible image files in the folder the script is located, then mirrors the exact file tree the images were in and downscales them all in mass. This was the first time I actually added failsafes, error handling and even mulitple OS support to my code. It was quite a challenge, but I'm quite proud of this one."
     },
     {
         id: 8,
         // date: "September 28, 2022",
-        date: "September 2022",
+        date: "28/09/22",
         title: "Growtopia Trainer",
-        image: getImg("gt.jpg"),
+        // image: getImg("gt.jpg"),
         lang: "C#",
         github: "",
         figma: "",
         online: "",
-        p1: "Otsustasin häki või niiöelda 'Trainer'i kallal hakata töötama kui sõpredega tuli suvakas idee seda teha. 'Trainer' tähendab mingisugust programmi millel on suur kollektsioon häkke mingisugusele mängule, nagu näiteks Growtopiale. See ka, nagu tavaliselt, osutus suuremaks ja keerulisemaks projektiks kui ma algselt arvasin. Plaanin lisada veel paljusi feature'eid. Hiljuti sain just valmis MAC aadressi muutja, mis oli suur ettevõtmine kuna pidin õppima kuidas MAC aadressid töötavad, kuidas Windows nendest aru saab ja kasutab ning kuidas MAC aadressi üldse muuta saab.",
-        p2: "Hetkel on selle projekti GitHub privaatne, kuid on plaan see kunagi avalikuks teha kui see valmis saab. Kuid sinnani on veel kaua aega, sest selle arendamine on üllatavalt aeganõudev ja mul on veel palju õppida programmide ja häkkide arendamisel.",
+        p1: "When playing Growtopia with my friends in the school dorms, I had a random idea to make a Trainer/Hack for it. Didn't seem that difficult, as I've made loads of hacks for Roblox in C# previously. The 'hacking' part was honestly the easiest of all of this. I learned how Windows' registry & network adapters work to make a MAC address spoofer which finds all network adapters on your computer, ignores the useless ones and changes a bunch of registry values to spoof your MAC address to unban your computer from Growtopia in case that happens. After a while everything got bloated and the UI was a pain to work on using Windows Forms App as I dind't know WPF, which led me to abandon the project."
     },
 ]
 
