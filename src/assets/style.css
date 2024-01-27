@@ -37,6 +37,17 @@ html {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 24px;
 }
 
+.bg-dots {
+  --dot-bg: rgb(23 23 23);
+  --dot-color: rgb(61, 61, 61);
+  --dot-size: 1px;
+  --dot-space: 22px;
+      background:
+          linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+          linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+          var(--dot-color);
+}
+
 .wrapper {
   animation: scroll 100s linear infinite;
   background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"),

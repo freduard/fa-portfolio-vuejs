@@ -31,10 +31,10 @@ function expandCard(id) {
 </script>
 
 <template>
-    <div class="w-full min-h-screen overflow-x-hidden font-['mrdafoe'] bg-neutral-900 pb-12">
-        <div class="w-full p-2 projectsHeader flex justify-between items-center px-2 gap-2">
+    <div class="w-full min-h-screen overflow-x-hidden font-['mrdafoe'] bg-neutral-900 pb-12 bg-dots">
+        <div class="w-full p-2 projectsHeader flex justify-between items-center px-2 gap-2 bg-neutral-900">
             <div class="w-full border-b border-neutral-500"></div>
-            <h1 class=" text-5xl sm:text-6xl md:text-7xl lg:text-8xl 3xl:text-9xl font-bold">PROJECTS</h1>
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold">PROJECTS</h1>
             <div class="w-full border-b border-neutral-500"></div>
         </div>
         <div class="flex flex-col p-6 sm:px-20 lg:p-32 lg:grid lg:grid-cols-2 2xl:grid-cols-3 gap-6 lg:gap-12 font-mono text-sm">

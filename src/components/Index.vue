@@ -1,7 +1,5 @@
 <script setup>
-    const props = defineProps({
-
-    })
+import { IconInstagram, IconGithub, IconLinkedinIn } from '@iconify-prerendered/vue-fa-brands';
 </script>
 
 <template>
@@ -17,10 +15,10 @@
                     I tinker with websites, programs, scripts and stay active in my free time.</p>
             </div>
             <div class="flex flex-col items-center max-w-48 sm:hidden">
-                <div class="flex w-full justify-between p-1 border-b border-neutral-500">
-                    <!-- <a href=""><unicon name="instagram" fill="white" class="h-6 w-6" /></a>
-                    <a href=""><unicon name="github-alt" fill="white" class="h-6 w-6" /></a>
-                    <a href=""><unicon name="linkedin-alt" fill="white" class="h-6 w-6" /></a> -->
+                <div class="flex w-full justify-between p-1 pb-2 border-b border-neutral-500">
+                    <a href=""><IconInstagram class="h-7 w-7"/></a>
+                    <a href=""><IconGithub class="h-7 w-7" /></a>
+                    <a href=""><IconLinkedinIn class="h-7 w-7" /></a>
                 </div>
                 <a href="" class="p-1 font-['mrdafoe'] text-sm">aitfredy@gmail.com</a>
             </div>
@@ -30,11 +28,7 @@
 </template>
 
 <style scoped>
-.svg {
-    fill: red;
-}
-
-.social:hover .svg {
-    fill: #E3292C;
+a:hover >>> path {
+    color: #E3292C !important;
 }
 </style>
