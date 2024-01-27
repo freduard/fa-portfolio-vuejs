@@ -16,9 +16,9 @@ import { IconInstagram, IconGithub, IconLinkedinIn } from '@iconify-prerendered/
             </div>
             <div class="flex flex-col items-center max-w-48 sm:hidden">
                 <div class="flex w-full justify-between p-1 pb-2 border-b border-neutral-500">
-                    <a href=""><IconInstagram class="h-7 w-7"/></a>
-                    <a href=""><IconGithub class="h-7 w-7" /></a>
-                    <a href=""><IconLinkedinIn class="h-7 w-7" /></a>
+                    <a href="https://www.instagram.com/fredy.ait/" target="_blank"><IconInstagram class="h-7 w-7"/></a>
+                    <a href="https://github.com/freduard" target="_blank"><IconGithub class="h-7 w-7" /></a>
+                    <a href="https://www.linkedin.com/in/fredy-ait-7504b3227/" target="_blank"><IconLinkedinIn class="h-7 w-7" /></a>
                 </div>
                 <a href="" class="p-1 font-['mrdafoe'] text-sm">aitfredy@gmail.com</a>
             </div>
