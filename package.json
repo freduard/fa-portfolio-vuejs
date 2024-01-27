@@ -9,7 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.4.15"
+    "@iconify-prerendered/vue-fa-brands": "^0.23.1702311934",
+    "@iconify-prerendered/vue-ph": "^0.23.1702313425",
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.3",

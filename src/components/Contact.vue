@@ -1,40 +1,72 @@
 <script setup>
-const props = defineProps({
-    state: String
+import { onMounted } from 'vue'
+
+function handleForm(res, inputs, textArea) {
+    setTimeout(() => {
+        inputs.forEach((input) => {
+            input.value = ''
+        })
+
+        textArea.value = ''
+        res.style.padding = '0.5rem'
+        res.classList.replace('max-h-0', 'max-h-16')
+    }, 500)
+
+    setTimeout(() => {
+        res.style.padding = '0rem'
+        res.classList.replace('max-h-16', 'max-h-0')
+    }, 5000)
+
+    document.querySelector('button').setAttribute('disabled', 'disabled')
+}
+
+onMounted(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const submitted = urlParams.get('s');
+    const inputs = document.querySelectorAll('input')
+    const textArea = document.querySelector('textarea')
+    const res = document.querySelector('.successMessage')
+
+    if(submitted == 1) {
+        handleForm(res, inputs, textArea)
+    }
+
+    if(submitted == 0) {
+        res.classList.replace('bg-green-700', 'bg-red-700')
+        res.innerHTML = 'Something went wrong... Try again later or contact me directly at aitfredy@gmail.com.'
+        handleForm(res, inputs, textArea)
+    }
 })
+
+
 </script>
 
 <template>
     <div class="w-full min-h-screen font-['mrdafoe']">
         <div class="w-full h-32 md:h-40 bg-neutral-900 top-0 relative contactHeader flex justify-center items-center">
-            <h1 class="z-50 text-5xl md:text-6xl absolute font-bold">Contact</h1>
+            <h1 class="z-50 text-5xl sm:text-6xl md:text-7xl absolute font-bold">Contact</h1>
         </div>
-
-        <!-- <div v-if="props.state == 1" class="bg-green-700 p-2 rounded drop-shadow-md flex gap-2">
-            <p class="text-xl text-center font-bold">Tänan!</p>
-            <p class="text-xl text-center">Võtan teiega esimesel võimalusel ühendust.</p>
-        </div>
-        <div v-if="props.state == 2" class="bg-[#E7685D] p-2 rounded drop-shadow-md flex gap-2" id="alert">
-            <p class="text-xl text-center">Midagi läks valesti! Kontakteeru minuga otse: <a href="mailto:aitfredy@gmail.com" class="underline">aitfredy@gmail.com</a></p>
-        </div> -->
         <div class="w-full h-full p-6 sm:px-20 md:px-32 lg:px-64 xl:px-96 2xl:px-[40rem] py-32 sm:py-48 md:py-64 flex flex-col justify-center items-center">
             <form class="bg-neutral-800 flex flex-col p-6 contactCard relative cds w-full" action="https://tak21fredyait.itmajakas.ee/" method="post">
+                <div class="text-center successMessage bg-green-700 p-0 overflow-hidden duration-500 rounded mb-4 font-['quicksand'] text-sm font-semibold max-h-0">
+                    Sent! I will get back you as soon as possible.
+                </div>
                 <div class="font-['quicksand'] font-semibold flex flex-col gap-4">
                     <div>
                         <p class="">Your Name</p>
-                        <input type="text" name="name" required="required" class="w-full p-2 rounded bg-neutral-900">
+                        <input type="text" name="name" required="required" class="w-full text-sm bg-neutral-900 appearance-none border-2 border-neutral-900 rounded p-2 leading-tight outline-none focus:border-[#E3292C] focus:drop-shadow-lg duration-150">
                     </div>
                     <div>
                         <p class="">Your E-Mail</p>
-                        <input type="text" name="emanueladdresshaha" required="required" class="w-full p-2 rounded bg-neutral-900">
+                        <input type="text" name="emanueladdresshaha" required="required" class="w-full text-sm bg-neutral-900 appearance-none border-2 border-neutral-900 rounded p-2 leading-tight outline-none focus:border-[#E3292C] focus:drop-shadow-lg duration-150">
                         <input type="text" name="email" autocomplete="off" class="hidden">
                         <input type="text" name="website" autocomplete="off" class="hidden">
-                    </div>
+                    </div>  
                     <div>
                         <p class="">Message</p>
-                        <textarea name="message" rows="3" spellcheck="false" required="required" class="resize-none outline-none w-full p-2 rounded bg-neutral-900"></textarea>
+                        <textarea name="message" rows="3" spellcheck="false" required="required" class="w-full text-sm bg-neutral-900 appearance-none border-2 border-neutral-900 rounded p-2 leading-tight focus:border-[#E3292C] focus:drop-shadow-lg duration-150 resize-none outline-none"></textarea>
                     </div>
-                    <button type="submit" name="submit" class="">Submit</button>
+                    <button type="submit" name="submit" class="bg-neutral-900 p-2 rounded hover:bg-zinc-900 duration-150 disabled:bg-neutral-950 disabled:text-neutral-800">Submit</button>
                 </div>
             </form>
         </div>
