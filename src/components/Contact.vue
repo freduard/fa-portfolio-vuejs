@@ -51,7 +51,8 @@ onMounted(() => {
                 <div class="text-center successMessage bg-green-700 p-0 overflow-hidden duration-500 rounded mb-4 font-['quicksand'] text-sm font-semibold max-h-0">
                     Sent! I will get back you as soon as possible.
                 </div>
-                <div class="font-['quicksand'] font-semibold flex flex-col gap-4">
+                <p class="font-['quicksand'] text-center font-semibold text-sm lg:text-base">Need a website, portfolio or something specific unrelated to web development? I can definitely be of help. Shoot me an email!</p>
+                <div class="font-['quicksand'] font-semibold flex flex-col gap-4 mt-4">
                     <div>
                         <p class="">Your Name</p>
                         <input type="text" name="name" required="required" class="w-full text-sm bg-neutral-900 appearance-none border-2 border-neutral-900 rounded p-2 leading-tight outline-none focus:border-[#E3292C] focus:drop-shadow-lg duration-150">

@@ -33,14 +33,30 @@
                 <div class="min-h-96 bg-amber-900 relative z-10 shepherdCard cds p-8 md:p-12 flex flex-col gap-2">
                     <h1 class="text-3xl font-bold">Job Experience</h1>
                     <div class="flex flex-col gap-2">
-                        <a href="https://shepherdcmms.com" target="_blank" class="underline duration-150 hover:text-[#E3292C] text-xl w-fit">Shepherd OÜ</a>
-                        <div>
-                            <p class="text-sm text-neutral-400">2022 - 2024</p>
-                            <p>Junior Software Developer</p>
+                        <div class="flex flex-col gap-2">
+                            <a href="https://shepherdcmms.com" target="_blank" class="underline duration-150 hover:text-[#E3292C] text-xl w-fit">Shepherd OÜ</a>
+                            <div>
+                                <p class="text-sm text-neutral-400">2022 - 2024</p>
+                                <p>Junior Software Developer</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-neutral-400">2021</p>
+                                <p>3 Months Internship as QA Tester</p>
+                            </div>
                         </div>
-                        <div>
-                            <p class="text-sm text-neutral-400">2021</p>
-                            <p>3 Months Internship as QA Tester</p>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-center gap-2">
+                                <p class="text-xl">Freelancing</p>
+                                <div class="border-b w-full h-0 border-neutral-500"></div>
+                            </div>
+                            <div>
+                                <p class="text-sm text-neutral-400">2022</p>
+                                <p><a href="https://branfor.ee/" class="underline duration-150 hover:text-[#E3292C]">Branfor OÜ</a> Homepage</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-neutral-400">2022</p>
+                                <p><a href="https://tak21fredyait.itmajakas.ee/andres/" target="_blank" class="underline duration-150 hover:text-[#E3292C]">Andres .K</a> Personal Portfolio</p>
+                            </div>
                         </div>
                     </div>
                 </div>
