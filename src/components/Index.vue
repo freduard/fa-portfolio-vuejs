@@ -11,7 +11,7 @@ import { IconInstagram, IconGithub, IconLinkedinIn } from '@iconify-prerendered/
                 <p class="text-sm md:text-base lg:text-lg xl:text-xl text-[#E3292C]">Junior Software Developer</p>
             </div>
             <div>
-                <p class="text-sm lg:text-base max-w-[30rem]">I'm an active young man who likes anything to do with computers, cars and fitness. 
+                <p class="text-sm lg:text-base max-w-[30rem]">I'm an active young man from Estonia who likes anything to do with computers, cars and fitness. 
                     I tinker with websites, programs, scripts and stay active in my free time.</p>
             </div>
             <div class="flex flex-col items-center max-w-48 sm:hidden">

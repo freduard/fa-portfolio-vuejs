@@ -57,7 +57,7 @@ function expandCard(id) {
                 </div>
                 <div class="hidden lg:flex flex-col justify-between h-full gap-2">
                     <div class="flex flex-col gap-2">
-                        <h1 class="z-10 text-lg font-semibold lg:text-2xl xl:text-3xl">{{ project.title }}</h1>
+                        <h1 class="z-10 text-lg font-semibold lg:text-2xl">{{ project.title }}</h1>
                         <div class="flex gap-4 text-lg">
                             <a :href="project.github" v-if="project.github" target="_blank" class="hover:text-[#E3292C] duration-150">GITHUB</a>
                             <p class="text-neutral-500 cursor-default select-none" v-else>GITHUB</p>
