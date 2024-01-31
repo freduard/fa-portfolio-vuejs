@@ -37,8 +37,6 @@ onMounted(() => {
         handleForm(res, inputs, textArea)
     }
 })
-
-
 </script>
 
 <template>
