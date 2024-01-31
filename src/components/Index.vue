@@ -1,5 +1,6 @@
 <script setup>
-import { IconInstagram, IconGithub, IconLinkedinIn } from '@iconify-prerendered/vue-fa-brands';
+import { IconGithub, IconLinkedinIn } from '@iconify-prerendered/vue-fa-brands';
+import { IconPhoneCallFill } from '@iconify-prerendered/vue-ph'
 </script>
 
 <template>
@@ -16,7 +17,7 @@ import { IconInstagram, IconGithub, IconLinkedinIn } from '@iconify-prerendered/
             </div>
             <div class="flex flex-col items-center max-w-48 sm:hidden">
                 <div class="flex w-full justify-between p-1 pb-2 border-b border-neutral-500">
-                    <a href="https://www.instagram.com/fredy.ait/" target="_blank"><IconInstagram class="h-7 w-7"/></a>
+                    <a href="#contact"><IconPhoneCallFill class="h-7 w-7"/></a>
                     <a href="https://github.com/freduard" target="_blank"><IconGithub class="h-7 w-7" /></a>
                     <a href="https://www.linkedin.com/in/fredy-ait-7504b3227/" target="_blank"><IconLinkedinIn class="h-7 w-7" /></a>
                 </div>

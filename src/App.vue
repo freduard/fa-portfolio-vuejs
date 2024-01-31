@@ -1,5 +1,6 @@
 <script setup>
 import { IconInstagram, IconGithub, IconLinkedinIn } from '@iconify-prerendered/vue-fa-brands';
+import { IconPhoneCallFill } from '@iconify-prerendered/vue-ph'
 import { onMounted } from 'vue'
 
 import Index from './components/Index.vue';
@@ -46,7 +47,7 @@ onMounted(() => {
         <a href="mailto:aitfredy@gmail.com" class="hover:text-[#E3292C] duration-150" style="transform: rotate(-90deg);">aitfredy@gmail.com</a>
     </div>
     <div class="hidden sm:flex font-['mrdafoe'] items-center flex-col justify-center w-20 gap-5 h-full fixed right-0 z-[1000]">
-        <a href="https://www.instagram.com/fredy.ait/" target="_blank" class="flex items-center justify-center p-1"><IconInstagram class="h-6 w-6"/></a>
+        <a href="#contact" class="flex items-center justify-center p-1"><IconPhoneCallFill class="h-6 w-6"/></a>
         <a href="https://github.com/freduard" target="_blank" class="flex items-center justify-center p-1"><IconGithub class="h-6 w-6" /></a>
         <a href="https://www.linkedin.com/in/fredy-ait-7504b3227/" target="_blank" class="flex items-center justify-center p-1"><IconLinkedinIn class="h-6 w-6" /></a>
     </div>
